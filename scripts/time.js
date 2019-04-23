@@ -3,11 +3,48 @@ $(document).ready(function(){
 	var flagTime = 0;
 	var timer;
 
+	//начальное положение экрана при загрузке страницы
+	$('#timer_content').show();
+	$('#reports_content').hide();
+	$('#projects_content').hide();
+	$('#tags_content').hide();
+
+	// Переходы по вкладкам меню
+
+	$('#timer').on('click',  function(event){
+		$('#timer_content').show();
+		$('#reports_content').hide();
+		$('#projects_content').hide();
+		$('#tags_content').hide();
+	});
+
+	$('#reports').on('click',  function(event){
+		$('#timer_content').hide();
+		$('#reports_content').show();
+		$('#projects_content').hide();
+		$('#tags_content').hide();
+	});
+
+	$('#projects').on('click',  function(event){
+		$('#timer_content').hide();
+		$('#reports_content').hide();
+		$('#projects_content').show();
+		$('#tags_content').hide();
+	});
+
+	$('#tags').on('click',  function(event){
+		$('#timer_content').hide();
+		$('#reports_content').hide();
+		$('#projects_content').hide();
+		$('#tags_content').show();
+	});
+
 	// выбор сервера на установку флажка
 	$('#socket_server').click(function(){
 		$('#spring_boot').prop('checked', false);
 	});
 
+	//старт секундомера
 	$('#start_timer').on('click',  function(event) {
 
 		if (flagTime == 0) {
@@ -60,8 +97,8 @@ $(document).ready(function(){
 
 	function stop(){
 		clearInterval(timer);
-		
 		flagTime = 0;
+		//alert("Text" + $('#text_time').val() + " time:" + $('#label_time').text());
 	}
 
 });

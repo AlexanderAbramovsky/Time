@@ -9,23 +9,37 @@
 </head>
 <body>
 
-    <div id="header">шапка сайта</div>
-    <div id="menu">
-        <button>кнопка 1</button> <br>
-        <button>кнопка 2</button> <br>
-        <button>кнопка 3</button> <br> 
-        <button>кнопка 4</button> <br>
-    </div>
-    <div id="content">
-
-        <button id="start_timer" class="start_timer">start</button>
-        <br><br>
-        <label id="label_time" > 00:00:00 </label>
-
-    </div>
-    <div id="footer">низ сайта</div>
-
+    <div id="wrapper">
+        <div id="menu">
+            
+            <ul>
+                <li><button id="timer">Таймер</button></li>
+                <li><button id="reports">Отчёты</button></li>
+                <li><button id="projects">Проекты</button></li>
+                <li><button id="tags">Теги</button></li>
+            </ul>
+            
+        </div>
     
+        <div id="content">
+            <div id="timer_content">
+                <input type="text" id="text_time" size="10">
+                <label id="label_time" > 00:00:00 </label>
+                <button id="start_timer" class="start_timer">start</button>
+            </div>
+
+            <div id="reports_content">ОТЧЁТЫ</div>
+    
+            <div id="projects_content">ПРОЕКТЫ</div>
+    
+            <div id="tags_content">
+                <input type="text" name="">
+                <button>Добавить</button>
+            </div>
+        </div>
+
+       
+    </div>
 
     <script src="scripts/jquery-3.4.0.min.js"></script> 
     <script src="scripts/time.js"></script>
