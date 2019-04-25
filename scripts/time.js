@@ -9,6 +9,8 @@ $(document).ready(function(){
 	$('#projects_content').hide();
 	$('#tags_content').hide();
 
+
+
 	// Переходы по вкладкам меню
 
 	$('#timer').on('click',  function(event){
@@ -16,6 +18,21 @@ $(document).ready(function(){
 		$('#reports_content').hide();
 		$('#projects_content').hide();
 		$('#tags_content').hide();
+
+
+		// ajax запрос
+		$.ajax({
+      		url: "http://localhost:8080/demo/all",
+      		type: "GET",
+      		dataType: "json",
+      		success: function(msg){
+         		alert(msg);
+      		},
+      		error: function(msg){
+         		alert("Ошибка");
+      		}
+   		});
+
 	});
 
 	$('#reports').on('click',  function(event){
