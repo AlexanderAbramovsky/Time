@@ -44,7 +44,7 @@ public class UserController {
     }
 
     @CrossOrigin
-    @RequestMapping(path="/all")
+    @PostMapping(path="/all")
     public Iterable<User> getAllUsers() {
         return service.findAll();
     }

@@ -23,7 +23,7 @@ $(document).ready(function(){
 		// ajax запрос
 		$.ajax({
       		url: "http://localhost:8080/demo/all",
-      		type: "GET",
+      		type: "POST",
       		dataType: "json",
       		success: function(msg){
          		alert(msg);
@@ -56,9 +56,22 @@ $(document).ready(function(){
 		$('#tags_content').show();
 	});
 
-	// выбор сервера на установку флажка
-	$('#socket_server').click(function(){
-		$('#spring_boot').prop('checked', false);
+	$('#all').on('click', function(event){
+
+		$.ajax({
+			url: 'http://localhost:8080/get/1',
+			type: 'POST',
+			dataType: 'json',
+			success: function(msg){
+
+				$('#database').text(msg.id + " " + msg.fio + " " + msg.number);
+         		
+      		},
+      		error: function(msg){
+         		alert("Ошибка");
+      		}
+		});
+		
 	});
 
 	//старт секундомера

@@ -5,7 +5,8 @@
 <html>
 <head>
 	<title>Time</title>
-     <link href="styles/menu.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/css/menu.css"/>
 </head>
 <body>
 
@@ -26,6 +27,19 @@
                 <input type="text" id="text_time" size="10">
                 <label id="label_time" > 00:00:00 </label>
                 <button id="start_timer" class="start_timer">start</button>
+                <br><br><br>
+
+                <label id="label_fio" >fio</label>
+                <input type="text" id="text_fio" size="10">
+                
+                <label id="label_number" >number</label>
+                <input type="text" id="text_number" size="10">
+                
+                <button id="add" class="start_timer">Добавить</button> <br> <br> <br>
+                <button id="all" class="start_timer">Вывести всё</button>
+
+                <br>
+                <div id="database"></div>
             </div>
 
             <div id="reports_content">ОТЧЁТЫ</div>
@@ -41,7 +55,7 @@
        
     </div>
 
-    <script src="scripts/jquery-3.4.0.min.js"></script> 
-    <script src="scripts/time.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js/"></script>
+    <script type="text/javascript" src="js/time.js/"></script>
 </body>
 </html>

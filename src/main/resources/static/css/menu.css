@@ -1,0 +1,20 @@
+body{
+	margin: 0px;
+	background: blue;
+}
+
+#menu{
+	background:#18181C;
+	width: 20%;
+	height:100vh; 
+	float: left;
+	position: fixed;
+}
+
+/*блок контента*/
+#content{
+	background: red;
+	width: calc(80% - 20px); 
+	padding: 10px;
+	float: right;
+}
