@@ -25,7 +25,7 @@ public class TagController {
     }
 
     @PostMapping(path="/save_tag")
-    public void saveTag(@RequestParam(value = "id", required = false, defaultValue = "null")  Integer id,
+    public void saveTag(@RequestParam Integer id,
                          @RequestParam String tag) {
         Tag tagSave = new Tag(id, tag);
         service.saveTag(tagSave);

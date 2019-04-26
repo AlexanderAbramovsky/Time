@@ -49,31 +49,7 @@ $(document).ready(function(){
 		$('#tags_content').hide();
 	});
 
-	$('#tags').on('click',  function(event){
-		$('#timer_content').hide();
-		$('#reports_content').hide();
-		$('#projects_content').hide();
-		$('#tags_content').show();
-	});
 
-	$('#all').on('click', function(event){
-
-		$.ajax({
-			url: 'http://localhost:8080/get_tag',
-			data: 'id=1',
-			type: 'POST',
-			dataType: 'json',
-			success: function(msg){
-
-				$('#database').text(msg.id + " " + msg.tag);
-         		
-      		},
-      		error: function(msg){
-         		alert("Ошибка");
-      		}
-		});
-		
-	});
 
 	//старт секундомера
 	$('#start_timer').on('click',  function(event) {

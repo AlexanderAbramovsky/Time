@@ -1,6 +1,6 @@
 body{
 	margin: 0px;
-	background: blue;
+	background: green;
 }
 
 #menu{
@@ -17,4 +17,14 @@ body{
 	width: calc(80% - 20px); 
 	padding: 10px;
 	float: right;
+}
+
+.label{
+
+}
+
+.span{
+	padding: 10px;
+	background: blue;
+	border-radius: 20px;
 }
