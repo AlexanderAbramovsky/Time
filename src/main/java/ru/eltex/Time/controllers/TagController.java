@@ -1,0 +1,48 @@
+package ru.eltex.Time.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import ru.eltex.Time.entity.Tag;
+import ru.eltex.Time.service.TagService;
+
+import java.util.Optional;
+
+@RestController
+public class TagController {
+
+    private TagService service;
+
+    @Autowired
+    public void setNoteService(TagService service) {
+        this.service = service;
+    }
+
+    @PostMapping(path="/get_tag")
+    public Optional<Tag> getTag(@RequestParam int id) {
+        return service.getTagById(id);
+    }
+
+    @PostMapping(path="/save_tag")
+    public void saveTag(@RequestParam(value = "id", required = false, defaultValue = "null")  Integer id,
+                         @RequestParam String tag) {
+        Tag tagSave = new Tag(id, tag);
+        service.saveTag(tagSave);
+    }
+
+    @PostMapping(path="/update_tag")
+    public void updateTag(@RequestParam Integer id, @RequestParam String tag) {
+        service.updateTag(id, tag);
+    }
+
+    @PostMapping(path="/delete_tag")
+    public void deleteTag(@RequestParam int id) {
+        service.deleteTag(id);
+    }
+
+    @PostMapping(path="/all_tags")
+    public Iterable<Tag> getAllTags() {
+        return service.findAll();
+    }
+}
