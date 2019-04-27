@@ -18,6 +18,11 @@ public class TagServiceImpl implements TagService {
     }
 
     @Override
+    public Iterable<Tag> getTagByTagText(String tag) {
+        return repository.findByTag(tag);
+    }
+
+    @Override
     public Optional<Tag> getTagById(Integer id) {
         return repository.findById(id);
     }

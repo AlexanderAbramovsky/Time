@@ -1,6 +1,7 @@
 package ru.eltex.Time.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,15 +20,16 @@ public class TagController {
         this.service = service;
     }
 
+
+
     @PostMapping(path="/get_tag")
     public Optional<Tag> getTag(@RequestParam int id) {
         return service.getTagById(id);
     }
 
     @PostMapping(path="/save_tag")
-    public void saveTag(@RequestParam Integer id,
-                         @RequestParam String tag) {
-        Tag tagSave = new Tag(id, tag);
+    public void saveTag(@RequestParam String tag) {
+        Tag tagSave = new Tag(null, tag);
         service.saveTag(tagSave);
     }
 
@@ -44,5 +46,10 @@ public class TagController {
     @PostMapping(path="/all_tags")
     public Iterable<Tag> getAllTags() {
         return service.findAll();
+    }
+
+    @GetMapping(path="/test_get")
+    public Iterable<Tag> getTags(@RequestParam String tag) {
+        return service.getTagByTagText(tag);
     }
 }
