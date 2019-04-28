@@ -4,7 +4,7 @@ $(document).ready(function(){
 	var timer;
 
 	//начальное положение экрана при загрузке страницы
-	$('#timer_content').show();
+	$('#timer_content').fadeIn();
 	$('#reports_content').hide();
 	$('#projects_content').hide();
 	$('#tags_content').hide();
@@ -14,14 +14,19 @@ $(document).ready(function(){
 	// Переходы по вкладкам меню
 
 	$('#timer').on('click',  function(event){
-		$('#timer_content').show();
+		$('#timer_content').fadeIn();
 		$('#reports_content').hide();
 		$('#projects_content').hide();
 		$('#tags_content').hide();
 
+		//меняем цвет кнопки указывая на её активность
+		$("#timer").css("background","#B3E5FC");
+		$("#reports").css("background","#03A9F4");
+		$("#projects").css("background","#03A9F4");
+		$("#tags").css("background","#03A9F4");
 
 		// ajax запрос
-		$.ajax({
+		/*$.ajax({
       		url: "http://localhost:8080/demo/all",
       		type: "POST",
       		dataType: "json",
@@ -31,22 +36,34 @@ $(document).ready(function(){
       		error: function(msg){
          		alert("Ошибка");
       		}
-   		});
+   		});*/
 
 	});
 
 	$('#reports').on('click',  function(event){
 		$('#timer_content').hide();
-		$('#reports_content').show();
+		$('#reports_content').fadeIn();
 		$('#projects_content').hide();
 		$('#tags_content').hide();
+
+		//меняем цвет кнопки указывая на её активность
+		$("#timer").css("background","#03A9F4");
+		$("#reports").css("background","#B3E5FC");
+		$("#projects").css("background","#03A9F4");
+		$("#tags").css("background","#03A9F4");
 	});
 
 	$('#projects').on('click',  function(event){
 		$('#timer_content').hide();
 		$('#reports_content').hide();
-		$('#projects_content').show();
+		$('#projects_content').fadeIn();
 		$('#tags_content').hide();
+
+		//меняем цвет кнопки указывая на её активность
+		$("#timer").css("background","#03A9F4");
+		$("#reports").css("background","#03A9F4");
+		$("#projects").css("background","#B3E5FC");
+		$("#tags").css("background","#03A9F4");
 	});
 
 

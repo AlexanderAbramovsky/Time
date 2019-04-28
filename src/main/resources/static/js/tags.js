@@ -6,10 +6,17 @@ $(document).ready(function(){
 
 	// переход на вкладку теги 
 	$('#tags').on('click',  function(event){
+		//делаем видимым только вкладку Теги
 		$('#timer_content').hide();
 		$('#reports_content').hide();
 		$('#projects_content').hide();
 		$('#tags_content').fadeIn();
+
+		//меняем цвет кнопки указывая на её активность
+		$("#timer").css("background","#03A9F4");
+		$("#reports").css("background","#03A9F4");
+		$("#projects").css("background","#03A9F4");
+		$("#tags").css("background","#B3E5FC");
 
 		addTagsOfDiv();
 	});
@@ -100,7 +107,6 @@ $(document).ready(function(){
             				click: function(event){
             					// запоминаем id и текст тега
             					idUpdateTeg = id;
-            					$('#text_update_new_tag').val(text);
                 				$('#overlay_update').fadeIn(); // открываем модальное окно обновления тега
             				}
             			}	

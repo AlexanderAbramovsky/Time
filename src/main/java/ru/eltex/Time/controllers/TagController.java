@@ -20,8 +20,6 @@ public class TagController {
         this.service = service;
     }
 
-
-
     @PostMapping(path="/get_tag")
     public Optional<Tag> getTag(@RequestParam int id) {
         return service.getTagById(id);
