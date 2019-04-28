@@ -1,5 +1,6 @@
 package ru.eltex.Time.controllers;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,6 +18,8 @@ import java.util.Optional;
 @RestController
 public class TagController {
 
+    final static Logger LOGGER = Logger.getLogger(TagController.class);
+
     /** Объект сервиса для управления таблицей */
     private TagService service;
 
@@ -26,6 +29,7 @@ public class TagController {
      */
     @Autowired
     public void setNoteService(TagService service) {
+        LOGGER.info("создание сервиса управления таблецей tags");
         this.service = service;
     }
 
@@ -36,6 +40,7 @@ public class TagController {
      */
     @PostMapping(path="/get_tag")
     public Optional<Tag> getTag(@RequestParam int id) {
+        LOGGER.info("Возвращает Tag по id запроса страницы");
         return service.getTagById(id);
     }
 
@@ -47,6 +52,7 @@ public class TagController {
      */
     @PostMapping(path="/save_tag")
     public Optional<Tag> saveTag(@RequestParam String tag) {
+        LOGGER.info("Сохраняет объект Tag");
         Tag tagSave = new Tag(null, tag);
         return service.saveTag(tagSave);
     }
@@ -58,6 +64,7 @@ public class TagController {
      */
     @PostMapping(path="/update_tag")
     public void updateTag(@RequestParam Integer id, @RequestParam String tag) {
+        LOGGER.info("Обновляет запрашиваемый объект Tag в базе данных");
         service.updateTag(id, tag);
     }
 
@@ -67,6 +74,7 @@ public class TagController {
      */
     @PostMapping(path="/delete_tag")
     public void deleteTag(@RequestParam int id) {
+        LOGGER.info("Удаляет запрашиваемый объект Tag из базы данных");
         service.deleteTag(id);
     }
 
@@ -76,6 +84,7 @@ public class TagController {
      */
     @PostMapping(path="/all_tags")
     public Iterable<Tag> getAllTags() {
+        LOGGER.info("Возвращает все объекты типа Tag из базы данных");
         return service.findAll();
     }
 
@@ -86,6 +95,7 @@ public class TagController {
      */
     @PostMapping(path="/get_tag_findTextTag")
     public Optional<Tag> getTags(@RequestParam String tag) {
+        LOGGER.info("Возвращает объект Tag по запрашиваему тексту тега");
         return service.getTagByTagText(tag);
     }
 }
