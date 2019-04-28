@@ -28,9 +28,9 @@ public class TagController {
     }
 
     @PostMapping(path="/save_tag")
-    public void saveTag(@RequestParam String tag) {
+    public Optional<Tag> saveTag(@RequestParam String tag) {
         Tag tagSave = new Tag(null, tag);
-        service.saveTag(tagSave);
+        return service.saveTag(tagSave);
     }
 
     @PostMapping(path="/update_tag")
@@ -48,8 +48,8 @@ public class TagController {
         return service.findAll();
     }
 
-    @GetMapping(path="/test_get")
-    public Iterable<Tag> getTags(@RequestParam String tag) {
+    @PostMapping(path="/get_tag_findTextTag")
+    public Optional<Tag> getTags(@RequestParam String tag) {
         return service.getTagByTagText(tag);
     }
 }

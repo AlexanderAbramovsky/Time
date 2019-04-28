@@ -18,8 +18,8 @@ public class TagServiceImpl implements TagService {
     }
 
     @Override
-    public Iterable<Tag> getTagByTagText(String tag) {
-        return repository.findByTag(tag);
+    public Optional<Tag> getTagByTagText(String tag) {
+        return repository.findOneByTag(tag);
     }
 
     @Override
@@ -28,8 +28,9 @@ public class TagServiceImpl implements TagService {
     }
 
     @Override
-    public void saveTag(Tag tag) {
+    public Optional<Tag> saveTag(Tag tag) {
         repository.save(tag);
+        return repository.findOneByTag(tag.getTag());
     }
 
     @Override
