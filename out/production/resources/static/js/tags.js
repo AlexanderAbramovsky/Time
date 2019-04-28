@@ -11,7 +11,7 @@ $(document).ready(function(){
 		$('#projects_content').hide();
 		$('#tags_content').fadeIn();
 
-		//addTagsOfDiv();
+		addTagsOfDiv();
 	});
 
 	// защита на повторяющийся тег!!!!
@@ -38,7 +38,7 @@ $(document).ready(function(){
 	function addTagsOfDiv(){
 
 		//удаляем содержимое div
-		$("#database").empty()
+		$("#all_tags").empty()
 
 		// делаем запрос на получение всех тегов из базы данных
 		$.ajax({
@@ -51,13 +51,15 @@ $(document).ready(function(){
 				$.each(data, function(index, element) {
             		
             		//создаем span в котором будет храниться один блок с тегом
-					var span = $('<span>', {class: 'span_tag', id: 'span'+element.id});
+					var span_tag = $('<span>', {class: 'span'});
 
-					var label = $('<label>', {text: element.tag, class: 'label_spanTag'});
+					var span_item = $('<span>', {class: 'span_item'});
+
+					var text_tag = element.tag;
 					
 					var buttonUpdate = $('<button>', {
 						text: 'изменить', 
-						class: 'button_update_span_tag', 
+						class: 'button_update', 
 						on: {
             				click: function(event){
             					// запоминаем id и текст тега
@@ -70,7 +72,7 @@ $(document).ready(function(){
 
 					var buttonDelete = $('<button>', {
 						text: 'удалить',
-						class: 'label',
+						class: 'button_delete',
 						id: "button"+element.id, 
 						href: "#delete_Form_Tag",
 						on: {
@@ -82,11 +84,13 @@ $(document).ready(function(){
             			}	
 					});
 
-					span.append(label);
-					span.append(buttonUpdate);
-					span.append(buttonDelete);
+					span_item.append(text_tag);
+					span_tag.append(buttonUpdate);
+					span_tag.append(buttonDelete);
 
-					$('#database').append(span);
+					span_tag.append(span_item);
+
+					$('#all_tags').append(span_tag);
    				 });
          		
       		},

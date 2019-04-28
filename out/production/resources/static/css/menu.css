@@ -155,7 +155,7 @@ body{
   	height: 30px;
   	width: 30px;
   	border: none;
-  	background: url("image/delete.png") no-repeat;
+  	background: url("../img/delete.png") no-repeat;
   	background-size: 25px 25px;
   	cursor: pointer;
 
@@ -167,7 +167,7 @@ body{
   	height: 30px;
   	width: 30px;
   	border: none;
-  	background: url("image/update.png") no-repeat;
+  	background: url("../img/update.png") no-repeat;
   	background-size: 25px 25px;
   	cursor: pointer;
 }
