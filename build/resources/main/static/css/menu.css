@@ -1,0 +1,296 @@
+body{
+	margin: 0px;
+	background-color: white;
+	color: black;
+}
+
+
+
+/*блок контента*/
+#content{
+	position: absolute;
+	width: calc(80% - 20px); 
+	padding: 10px;
+	left:20%;
+}
+
+.label{
+
+}
+
+.span{
+	padding-top: 30px;
+}
+
+
+/*______________________настройка меню____________________*/
+#menu{
+	background-color: #0288D1;
+	width: 20%;
+	height:100vh; 
+	float: left;
+	position: fixed;
+
+
+}
+
+.ul_menu{
+	
+
+}
+
+
+.li_mune{
+	list-style-type: none;
+	margin-top: 20px;
+}
+
+
+.button_menu{
+	background-color: #03A9F4;
+	color: white;
+	padding: 10px;
+	width: 200px;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	outline: none;
+	border: 2px solid;
+	border-radius: 5px;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.button_menu:hover { 
+	background: #B3E5FC !important; 
+}
+
+.button_menu:active {
+ background: white; 
+}
+
+/*____________блок_тегов__________________*/
+.div_add_tag{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+}
+
+.item_add_tag{
+    align-items: center; /* Выравнивание по левому краю */
+}
+
+.text_add_tag{
+
+	color: #03A9F4;
+	height: 50px;
+	width: 300px;
+	border: none;
+	border-bottom: 2px solid;
+	outline: none;
+	font-size: 30px;
+}
+
+.button_add_tag{
+	background-color: #03A9F4;
+	color: white;
+	height: 50px;
+	width: 200px;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	outline: none;
+	border: 2px solid;
+	border-radius: 5px;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.button_add_tag:hover { 
+	background: #B3E5FC; 
+}
+
+.button_add_tag:active {
+ background: white; 
+}
+
+.div_all_tags{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: inline-block;
+
+}
+
+
+/*вставляемые теги*/
+
+.span_item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.span{
+	color: #03A9F4;
+	padding: 5px;
+	margin: 10px;
+	border: 2px solid;
+	border-color: #03A9F4;
+	border-radius: 20px;
+	font-size: 25px;
+	font-weight: bold;
+	height: 30px;
+
+
+	display: inline-block;
+
+}
+
+.button_delete{
+	margin-left: 10px; 
+	outline: none;
+  	height: 30px;
+  	width: 30px;
+  	border: none;
+  	background: url("../img/delete.png") no-repeat;
+  	background-size: 25px 25px;
+  	cursor: pointer;
+
+}
+
+.button_update{
+	margin-left: 10px; 
+	outline: none;
+  	height: 30px;
+  	width: 30px;
+  	border: none;
+  	background: url("../img/update.png") no-repeat;
+  	background-size: 25px 25px;
+  	cursor: pointer;
+}
+
+/*____________________________Модальные окна___________________________*/
+
+/* главное поле 
+которое будет блокировать 
+другие действия */
+.overlay{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	/*прозрачность*/
+	background-color: rgba(0,0,0,.8); 
+	display: none;
+}
+
+/*настройка модального окна*/
+.popup_delete{
+	position: absolute;
+	width: 550px;
+	height: 400px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #0288D1;
+	color: #fff;
+	display: flex;
+	align-items: center;
+}
+
+.popup_item{
+	margin: 50px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+/*крестик закрытия*/
+.close_popup{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 23px;
+	height: 23px;
+	cursor: pointer;
+}
+
+/*настройка перекрестия*/
+.close_popup:before{
+
+	content: '';
+	background: #fff;
+	position: absolute;
+	top: 11px;
+	left: -4px;
+	width: 31px;
+	height: 5px;
+	transform: rotate(-45deg);
+}
+
+.close_popup:after{
+	content: '';
+	background: #fff;
+	position: absolute;
+	top: 11px;
+	left: -4px;
+	width: 31px;
+	height: 5px;
+	transform: rotate(45deg);
+}
+
+.button_popup{
+	background-color: white;
+	color: #03A9F4;
+	height: 50px;
+	width: 200px;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	outline: none;
+	border: 2px solid;
+	border-radius: 5px;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.button_popup:hover { 
+	background: #B3E5FC; 
+}
+
+.button_popup:active {
+ 	background: white; 
+}
+
+.popup_update{
+	position: absolute;
+	width: 600px;
+	height: 250px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #0288D1;
+	color: #fff;
+	display: flex;
+	align-items: center;
+}
+
+.popup_update_item{
+	display: flex;
+	align-items: center;
+}
+
+.popup_text{
+	color: #03A9F4;
+	height: 44px;
+	width: 300px;
+	border: none;
+	border: 2px solid;
+	border-radius: 5px;
+	outline: none;
+	font-size: 30px;
+	padding-left: 5px;
+}

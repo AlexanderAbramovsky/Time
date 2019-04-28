@@ -17,12 +17,12 @@ import java.util.Optional;
 @RestController
 public class TagController {
 
-    /** Объект сервиса для управления таблицей*/
+    /** Объект сервиса для управления таблицей */
     private TagService service;
 
     /**
      * Инициализация сервиса
-     * @param service -объект сервиса
+     * @param service - объект сервиса
      */
     @Autowired
     public void setNoteService(TagService service) {

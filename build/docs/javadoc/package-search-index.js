@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"ru.eltex.Time"},{"l":"ru.eltex.Time.controllers"},{"l":"ru.eltex.Time.entity"},{"l":"ru.eltex.Time.repository"},{"l":"ru.eltex.Time.service"}]
