@@ -114,23 +114,29 @@
 
                 <!-- модальное окно удаление тега -->
                 <div class="overlay" id="overlay_delete">
-                    <div class="popup" id="popup_delete">
-                        <h2>Вы точно хотите удалить тег ?</h2>
-                        При удаление он удалится отовсюду
-                        <button id="button_delete_delete">Удалить</button>
-                        <button id="button_delete_cancel">Отмена</button>
-                        <div class="close_popup" id="close_popup_delete"></div>
+                    <div class="popup_delete" id="popup_delete">
+                        <div class="popup_item">
+                            <h2>Вы уверены, что хотите удалить этот тег?</h2>
+                            <p>Метка также будет удалена из всех записей времени, которым она назначена. Это действие не может быть отменено.</p>
+                            <button id="button_delete_delete" class ="button_popup">Удалить</button>
+                            <button id="button_delete_cancel" style="margin-left: 30px" class ="button_popup">Отмена</button>
+                            <div class="close_popup" id="close_popup_delete"></div>
+                        </div>
                     </div>
                 </div>
             
                 <!-- модальное окно обновление тега -->
                 <div class="overlay" id="overlay_update">
-                    <div class="popup" id="popup_update">
-                        <h2>Введите текст</h2>
-                        <input type="text" id="text_update_new_tag">
-                        <button id="button_update_save">Сохранить</button>
-                        <button id="button_update_cancel">Отмена</button>
-                        <div class="close_popup" id="close_popup_update"></div>
+                    <div class="popup_update" id="popup_update">
+                        <div class="popup_item">
+                            <h2>Введите текст</h2>
+                            <div class="popup_update_item">
+                                <input type="text" id="text_update_new_tag" class="popup_text">
+                                <button id="button_update_save" 
+                                    class ="button_popup">Сохранить</button>
+                            </div>
+                            <div class="close_popup" id="close_popup_update"></div>
+                        </div>
                     </div>
                 </div>
 

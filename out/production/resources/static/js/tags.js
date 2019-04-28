@@ -26,6 +26,8 @@ $(document).ready(function(){
 				data: {tag: text} 
 			});
 
+			$('#text_add_tag').val("");
+			$('#tags_content').fadeIn();
 			addTagsOfDiv();
 
 		} else {
@@ -58,7 +60,6 @@ $(document).ready(function(){
 					var text_tag = element.tag;
 					
 					var buttonUpdate = $('<button>', {
-						text: 'изменить', 
 						class: 'button_update', 
 						on: {
             				click: function(event){
@@ -71,7 +72,6 @@ $(document).ready(function(){
             		});
 
 					var buttonDelete = $('<button>', {
-						text: 'удалить',
 						class: 'button_delete',
 						id: "button"+element.id, 
 						href: "#delete_Form_Tag",
@@ -85,8 +85,8 @@ $(document).ready(function(){
 					});
 
 					span_item.append(text_tag);
-					span_tag.append(buttonUpdate);
-					span_tag.append(buttonDelete);
+					span_item.append(buttonUpdate);
+					span_item.append(buttonDelete);
 
 					span_tag.append(span_item);
 

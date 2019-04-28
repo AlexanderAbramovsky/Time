@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Application {
 
-    public static final String NAME = "users";
-
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+
+        System.out.println("Я работаю тест");
     }
 }
