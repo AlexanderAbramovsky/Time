@@ -13,10 +13,10 @@ $(document).ready(function(){
 		$('#tags_content').fadeIn();
 
 		//меняем цвет кнопки указывая на её активность
-		$("#timer").css("background","#03A9F4");
-		$("#reports").css("background","#03A9F4");
-		$("#projects").css("background","#03A9F4");
-		$("#tags").css("background","#B3E5FC");
+		$("#timer").css("backgroundColor","#03A9F4");
+		$("#reports").css("backgroundColor","#03A9F4");
+		$("#projects").css("backgroundColor","#03A9F4");
+		$("#tags").css("backgroundColor","#B3E5FC");
 
 		addTagsOfDiv();
 	});
@@ -142,29 +142,32 @@ $(document).ready(function(){
 		//пересылаем серверу id и text тега который нужно обновить
 
 		textUpdateTeg = $('#text_update_new_tag').val();
-
-		//проверяем есть ли в базе такой же тег, если нет то обновляем тег
-		$.ajax({
-			url: 'http://localhost:8080/get_tag_findTextTag',
-			type: 'POST',
-			dataType: 'json',
-			data: {tag: textUpdateTeg},
-			success: function(data){
-				if(data != null){
-					alert("Такой тег уже существует !");
-				} else {
-					$.ajax({
-						url: 'http://localhost:8080/update_tag',
-						type: 'POST',
-						data: {id: idUpdateTeg, tag: textUpdateTeg},
-						success: function(){
-							$("#label_text" + idUpdateTeg).text(textUpdateTeg);
-							$('.overlay').fadeOut();
-						}
-					});	
+		if(textUpdateTeg == ""){
+			alert("Введите текст !");
+		} else {
+			//проверяем есть ли в базе такой же тег, если нет то обновляем тег
+			$.ajax({
+				url: 'http://localhost:8080/get_tag_findTextTag',
+				type: 'POST',
+				dataType: 'json',
+				data: {tag: textUpdateTeg},
+				success: function(data){
+					if(data != null){
+						alert("Такой тег уже существует !");
+					} else {
+						$.ajax({
+							url: 'http://localhost:8080/update_tag',
+							type: 'POST',
+							data: {id: idUpdateTeg, tag: textUpdateTeg},
+							success: function(){
+								$("#label_text" + idUpdateTeg).text(textUpdateTeg);
+								$('.overlay').fadeOut();
+							}
+						});	
+					}
 				}
-			}
-		});
+			});
+		}
 	});
 
 	//закрытие модального окна обновления тега

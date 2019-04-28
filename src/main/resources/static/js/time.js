@@ -20,10 +20,10 @@ $(document).ready(function(){
 		$('#tags_content').hide();
 
 		//меняем цвет кнопки указывая на её активность
-		$("#timer").css("background","#B3E5FC");
-		$("#reports").css("background","#03A9F4");
-		$("#projects").css("background","#03A9F4");
-		$("#tags").css("background","#03A9F4");
+		$("#timer").css("backgroundColor","#B3E5FC");
+		$("#reports").css("backgroundColor","#03A9F4");
+		$("#projects").css("backgroundColor","#03A9F4");
+		$("#tags").css("backgroundColor","#03A9F4");
 
 		// ajax запрос
 		/*$.ajax({
@@ -47,10 +47,10 @@ $(document).ready(function(){
 		$('#tags_content').hide();
 
 		//меняем цвет кнопки указывая на её активность
-		$("#timer").css("background","#03A9F4");
-		$("#reports").css("background","#B3E5FC");
-		$("#projects").css("background","#03A9F4");
-		$("#tags").css("background","#03A9F4");
+		$("#timer").css("backgroundColor","#03A9F4");
+		$("#reports").css("backgroundColor","#B3E5FC");
+		$("#projects").css("backgroundColor","#03A9F4");
+		$("#tags").css("backgroundColor","#03A9F4");
 	});
 
 	$('#projects').on('click',  function(event){
@@ -60,10 +60,10 @@ $(document).ready(function(){
 		$('#tags_content').hide();
 
 		//меняем цвет кнопки указывая на её активность
-		$("#timer").css("background","#03A9F4");
-		$("#reports").css("background","#03A9F4");
-		$("#projects").css("background","#B3E5FC");
-		$("#tags").css("background","#03A9F4");
+		$("#timer").css("backgroundColor","#03A9F4");
+		$("#reports").css("backgroundColor","#03A9F4");
+		$("#projects").css("backgroundColor","#B3E5FC");
+		$("#tags").css("backgroundColor","#03A9F4");
 	});
 
 

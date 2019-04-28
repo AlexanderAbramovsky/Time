@@ -62,7 +62,7 @@ body{
 }
 
 .button_menu:hover { 
-	background: #B3E5FC; 
+	background: #B3E5FC !important; 
 }
 
 .button_menu:active {
