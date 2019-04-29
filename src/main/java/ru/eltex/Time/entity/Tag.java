@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Table(name = "tags", schema = "tags")
 public class Tag {
 
-    /** id тега*/
+    /** id тега */
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
