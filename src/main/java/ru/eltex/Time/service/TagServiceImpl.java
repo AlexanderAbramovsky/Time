@@ -51,12 +51,13 @@ public class TagServiceImpl implements TagService {
     /**
      * Сохраняет объект Tag
      * @param tag - сохраняемый объект Tag
-     * @return - возвращает сохранённый объекта Tag
+     * @return - возвращает сохранённый объект Tag
      */
     @Override
     public Optional<Tag> saveTag(Tag tag) {
         repository.save(tag);
-        return repository.findOneByTag(tag.getTag());
+        //return repository.findOneByTag(tag.getTag());
+        return Optional.of(tag);
     }
 
     /**

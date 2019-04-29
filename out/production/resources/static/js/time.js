@@ -3,25 +3,33 @@ $(document).ready(function(){
 	var flagTime = 0;
 	var timer;
 
-	var test = 0;
+	var date;
+
+	var act;
+	var project = null;
+	var tag = null;
+	var dateAct;
+	var timeStart;
+	var timeEnd;
+	var timeAll;
 
 
 	//При нажатии на старт меняет иконку на стоп и обратно
 	$('#timer_button_controller').on('click',  function(event){
 		// меняем местами старт и стоп
 
-		if(test == 0){
+		if(flagTime == 0){
 			$('#timer_button_controller').css("background", "url(../img/stop.png)");
 			$('#timer_button_controller').css("background-size", "55px 55px");
 			$('#timer_button_bucket').show();
 			startTimer();
-			test = 1;	
+			flagTime = 1;	
 		} else {
 			$('#timer_button_controller').css("background", "url(../img/start.png)");
 			$('#timer_button_controller').css("background-size", "55px 55px");	
 			$('#timer_button_bucket').hide();
 			stopTimer();
-			test = 0;
+			flagTime = 0;
 		}
 		
 	});
@@ -33,16 +41,20 @@ $(document).ready(function(){
 		clearInterval(timer);
 		$('#timer_span').text("00:00:00");
 		$('#timer_text').val("");
-		test = 0;
+		flagTime = 0;
 	});
 
 	function startTimer(){
 
+			date = new Date();
+
+			// настройка текущей даты для передачи json
+			dateAct = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+			timeStart = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+
 			var seconds = 0;
 			var minutes = 0;
 			var hours = 0;
-
-			$('#start_timer').text('stop');
 
 			timer = setInterval(function(){
 				
@@ -78,9 +90,44 @@ $(document).ready(function(){
 	}
 
 	function stopTimer(){
+
+		date = new Date();
+
+		timeEnd = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+		timeAll = $('#timer_span').text();
+
 		clearInterval(timer);
 		$('#timer_text').val("");
 		$('#timer_span').text("00:00:00");
+
+		act = $('#timer_text').val();
+
+		if(act == ""){
+			act = "Добавить описание...";
+		}
+
+		$.ajax({
+			url: 'http://localhost:8080/save_act',
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				act: act,
+				project: project,
+				tag: tag,
+				date_act: dateAct,
+				time_start_act: timeStart,
+				time_end_act: timeEnd,
+				all_time_act: timeAll
+			},
+			success: function(data){
+						alert(data.id + " " + data.act + " " + data.project + " "
+							+ data.tag + " " + data.date_act + " " + data.time_start_act + " " 
+							+ data.time_end_act + " " + data.all_time_act);
+					} 
+		});
+		
+		alert(act + " " + project + " " + tag + " " + dateAct + " "
+			 + timeStart + " " + timeEnd + " " + timeAll);
 	}
 
 

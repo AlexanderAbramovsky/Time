@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import ru.eltex.Time.entity.Act;
 import ru.eltex.Time.repository.ActRepository;
 
+import java.util.Optional;
+
 /** Класс Service реализующий интерфейс ActService,
  *  реализует методы для работы с таблицей acts
  *  бызы данных mysql
@@ -24,6 +26,17 @@ public class ActServiceImpl implements ActService{
     @Autowired
     public void setActRepository(ActRepository repository) {
         this.repository = repository;
+    }
+
+    /**
+     * Сохраняет в базу данных объект Act
+     * @param act - объект класса Act
+     * @return - возвращает сохранённый объект Act
+     */
+    @Override
+    public Optional<Act> saveAct(Act act) {
+        repository.save(act);
+        return Optional.of(act);
     }
 
     /**
