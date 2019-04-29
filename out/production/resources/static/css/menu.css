@@ -4,7 +4,81 @@ body{
 	color: black;
 }
 
+/*__________________________Блок таймера______________________________*/
+.timer{
+	background: white;
+	width: 100%;
+	height: 60px;
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+    display: flex;
+	justify-content: left;
+	align-items: center;
+}
 
+#timer_text{
+	width: calc(100% - 450px);
+	height: calc(100% - 10px);
+	border: none;
+	outline: none;
+	padding-left: 30px;
+	font-size: 30px;
+	color: #0288D1;
+
+}
+
+.timer_button{
+	margin-left: 30px; 
+	outline: none;
+  	height: 30px;
+  	width: 30px;
+  	border: none;
+  	cursor: pointer;
+}
+
+#timer_button_tag{
+	background: url("../img/tag.png") no-repeat;
+	background-size: 30px 30px;
+}
+
+#timer_button_project{
+	background: url("../img/project.png") no-repeat;
+	background-size: 30px 30px;
+}
+
+.timer_button_controller{
+	margin-left: 30px; 
+	outline: none;
+  	height: 55px;
+  	width: 55px;
+  	border: none;
+  	cursor: pointer;
+  	border-radius: 50%;
+  	background: url("../img/start.png") no-repeat;
+	background-size: 55px 55px;
+}
+
+#timer_button_bucket{
+	margin-left: 20px;
+	display: none; 
+	outline: none;
+  	height: 30px;
+  	width: 30px;
+  	border: none;
+  	cursor: pointer;
+  	background: url("../img/bucket.png") no-repeat;
+	background-size: 30px 30px;
+}
+
+#timer_span{
+	color: white;
+	margin-left: 30px;
+	border-radius: 30px; 
+	padding: 10px;
+	font-size: 30px;
+	background: #03A9F4;
+}
 
 /*блок контента*/
 #content{

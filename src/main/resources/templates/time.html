@@ -14,31 +14,27 @@
         <div id="menu" class="menu">
             
             <ul class="ul_menu">
-                <li class="li_mune"><button class="button_menu" id="timer">Таймер</button></li>
-                <li class="li_mune"><button class="button_menu" id="reports">Отчёты</button></li>
-                <li class="li_mune"><button class="button_menu" id="projects">Проекты</button></li>
-                <li class="li_mune"><button class="button_menu" id="tags">Теги</button></li>
+                <li class="li_mune"><button class="button_menu" id="timer_menu">Таймер</button></li>
+                <li class="li_mune"><button class="button_menu" id="reports_menu">Отчёты</button></li>
+                <li class="li_mune"><button class="button_menu" id="projects_menu">Проекты</button></li>
+                <li class="li_mune"><button class="button_menu" id="tags_menu">Теги</button></li>
             </ul>
             
         </div>
     
         <div id="content">
             <div id="timer_content">
-                <input type="text" id="text_time" size="10">
-                <label id="label_time" > 00:00:00 </label>
-                <button id="start_timer" class="start_timer">start</button>
-                <br><br><br>
 
-                <label id="label_fio" >fio</label>
-                <input type="text" id="text_fio" size="10">
-                
-                <label id="label_number" >number</label>
-                <input type="text" id="text_number" size="10">
-                
-                <button id="add" class="start_timer">Добавить</button> <br> <br> <br>
-                <button id="all" class="start_timer">Вывести всё</button>
-
-                <br>
+                <div class="timer">
+                    <input type="text" name="" id="timer_text" 
+                        placeholder="Над чем ты работаешь ?">   
+                    <button class="timer_button" id="timer_button_tag"></button>
+                    <button class="timer_button" id="timer_button_project"></button> 
+                    <span id="timer_span">00:00:00</span>
+                    <button class="timer_button_controller"
+                        id="timer_button_controller"></button>
+                    <button id="timer_button_bucket"></button>         
+                </div>
                 
             </div>
 
@@ -76,37 +72,7 @@
                 
                 <div id="all_tags" class="div_all_tags">
 
-                    <span class="span">
-                        <span class="span_item">
-                            Тут текст
-                            <button class="button_update"></button>
-                            <button class="button_delete"></button>
-                        </span>
-                    </span>
-
-                     <span class="span">
-                        <span class="span_item">
-                            Тут текст
-                            <button class="button_update"></button>
-                            <button class="button_delete"></button>
-                        </span>
-                    </span>
-
-                     <span class="span">
-                        <span class="span_item">
-                            Тут текст
-                            <button class="button_update"></button>
-                            <button class="button_delete"></button>
-                        </span>
-                    </span>
-
-                     <span class="span">
-                        <span class="span_item">
-                            Тут текст
-                            <button class="button_update"></button>
-                            <button class="button_delete"></button>
-                        </span>
-                    </span>
+                   
 
                 </div>
 
@@ -164,5 +130,6 @@
     <script type="text/javascript" src="js/jquery-3.4.0.min.js/"></script> 
     <script type="text/javascript" src="js/time.js/"></script> 
     <script type="text/javascript" src="js/tags.js/"></script>
+    <script type="text/javascript" src="js/menu.js/"></script>
 </body>
 </html>

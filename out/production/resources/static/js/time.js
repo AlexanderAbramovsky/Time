@@ -3,77 +3,40 @@ $(document).ready(function(){
 	var flagTime = 0;
 	var timer;
 
-	//начальное положение экрана при загрузке страницы
-	$('#timer_content').fadeIn();
-	$('#reports_content').hide();
-	$('#projects_content').hide();
-	$('#tags_content').hide();
+	var test = 0;
 
 
+	//При нажатии на старт меняет иконку на стоп и обратно
+	$('#timer_button_controller').on('click',  function(event){
+		// меняем местами старт и стоп
 
-	// Переходы по вкладкам меню
-
-	$('#timer').on('click',  function(event){
-		$('#timer_content').fadeIn();
-		$('#reports_content').hide();
-		$('#projects_content').hide();
-		$('#tags_content').hide();
-
-		//меняем цвет кнопки указывая на её активность
-		$("#timer").css("backgroundColor","#B3E5FC");
-		$("#reports").css("backgroundColor","#03A9F4");
-		$("#projects").css("backgroundColor","#03A9F4");
-		$("#tags").css("backgroundColor","#03A9F4");
-
-		// ajax запрос
-		/*$.ajax({
-      		url: "http://localhost:8080/demo/all",
-      		type: "POST",
-      		dataType: "json",
-      		success: function(msg){
-         		alert(msg);
-      		},
-      		error: function(msg){
-         		alert("Ошибка");
-      		}
-   		});*/
-
+		if(test == 0){
+			$('#timer_button_controller').css("background", "url(../img/stop.png)");
+			$('#timer_button_controller').css("background-size", "55px 55px");
+			$('#timer_button_bucket').show();
+			startTimer();
+			test = 1;	
+		} else {
+			$('#timer_button_controller').css("background", "url(../img/start.png)");
+			$('#timer_button_controller').css("background-size", "55px 55px");	
+			$('#timer_button_bucket').hide();
+			stopTimer();
+			test = 0;
+		}
+		
 	});
 
-	$('#reports').on('click',  function(event){
-		$('#timer_content').hide();
-		$('#reports_content').fadeIn();
-		$('#projects_content').hide();
-		$('#tags_content').hide();
-
-		//меняем цвет кнопки указывая на её активность
-		$("#timer").css("backgroundColor","#03A9F4");
-		$("#reports").css("backgroundColor","#B3E5FC");
-		$("#projects").css("backgroundColor","#03A9F4");
-		$("#tags").css("backgroundColor","#03A9F4");
+	$('#timer_button_bucket').on('click', function(event) {
+		$('#timer_button_controller').css("background", "url(../img/start.png)");
+		$('#timer_button_controller').css("background-size", "55px 55px");	
+		$('#timer_button_bucket').hide();
+		clearInterval(timer);
+		$('#timer_span').text("00:00:00");
+		$('#timer_text').val("");
+		test = 0;
 	});
 
-	$('#projects').on('click',  function(event){
-		$('#timer_content').hide();
-		$('#reports_content').hide();
-		$('#projects_content').fadeIn();
-		$('#tags_content').hide();
-
-		//меняем цвет кнопки указывая на её активность
-		$("#timer").css("backgroundColor","#03A9F4");
-		$("#reports").css("backgroundColor","#03A9F4");
-		$("#projects").css("backgroundColor","#B3E5FC");
-		$("#tags").css("backgroundColor","#03A9F4");
-	});
-
-
-
-	//старт секундомера
-	$('#start_timer').on('click',  function(event) {
-
-		if (flagTime == 0) {
-			
-			flagTime = 1;
+	function startTimer(){
 
 			var seconds = 0;
 			var minutes = 0;
@@ -84,7 +47,7 @@ $(document).ready(function(){
 			timer = setInterval(function(){
 				
 				// проверка на секунды	
-    			if(seconds < 60){
+    			if(seconds < 59){
     				seconds++;
     			} else {
     				seconds = 0;
@@ -92,7 +55,7 @@ $(document).ready(function(){
     			}
 
     			// проверка на минуты
-    			if(minutes == 60){
+    			if(minutes == 59){
     				minutes = 0;
     				hours++;
     			}
@@ -109,20 +72,17 @@ $(document).ready(function(){
 
  				var clock = hoursStr + ":" + minutesStr + ":" + secondsStr;
 
-   				$('#label_time').text(clock);
+   				$('#timer_span').text(clock);
 
 			},1000);
-		} else {
-			$('#start_timer').text('start');
-			stop();
-		}
-		/* Act on the event */
-	});
-
-	function stop(){
-		clearInterval(timer);
-		flagTime = 0;
-		//alert("Text" + $('#text_time').val() + " time:" + $('#label_time').text());
 	}
+
+	function stopTimer(){
+		clearInterval(timer);
+		$('#timer_text').val("");
+		$('#timer_span').text("00:00:00");
+	}
+
+
 
 });

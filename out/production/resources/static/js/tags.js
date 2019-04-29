@@ -4,20 +4,9 @@ $(document).ready(function(){
 	var idUpdateTeg;
 	var textUpdateTeg;
 
-	// переход на вкладку теги 
-	$('#tags').on('click',  function(event){
-		//делаем видимым только вкладку Теги
-		$('#timer_content').hide();
-		$('#reports_content').hide();
-		$('#projects_content').hide();
-		$('#tags_content').fadeIn();
-
-		//меняем цвет кнопки указывая на её активность
-		$("#timer").css("backgroundColor","#03A9F4");
-		$("#reports").css("backgroundColor","#03A9F4");
-		$("#projects").css("backgroundColor","#03A9F4");
-		$("#tags").css("backgroundColor","#B3E5FC");
-
+	// переход на вкладку теги и загружаем все теги из базы данных
+	$('#tags_menu').on('click',  function(event){
+		//находится в файле tags.js
 		addTagsOfDiv();
 	});
 
