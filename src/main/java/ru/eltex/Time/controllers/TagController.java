@@ -28,7 +28,7 @@ public class TagController {
      * @param service - объект сервиса
      */
     @Autowired
-    public void setNoteService(TagService service) {
+    public void setTagService(TagService service) {
         LOGGER.info("создание сервиса управления таблецей tags");
         this.service = service;
     }
@@ -85,7 +85,7 @@ public class TagController {
     @PostMapping(path="/all_tags")
     public Iterable<Tag> getAllTags() {
         LOGGER.info("Возвращает все объекты типа Tag из базы данных");
-        return service.findAll();
+        return service.findAllTags();
     }
 
     /**

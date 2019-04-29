@@ -16,5 +16,5 @@ public interface TagService {
     Optional<Tag> saveTag(Tag tag);
     void updateTag(Integer id, String tag);
     void deleteTag(Integer id);
-    Iterable<Tag> findAll();
+    Iterable<Tag> findAllTags();
 }

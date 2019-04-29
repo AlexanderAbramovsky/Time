@@ -24,7 +24,7 @@ public class TagServiceImpl implements TagService {
      * @param repository - объект репозитория
      */
     @Autowired
-    public void setProductRepository(TagRepository repository) {
+    public void setActRepository(TagRepository repository) {
         this.repository = repository;
     }
 
@@ -86,7 +86,7 @@ public class TagServiceImpl implements TagService {
      * @return - возвращает объекты Tag
      */
     @Override
-    public Iterable<Tag> findAll() {
+    public Iterable<Tag> findAllTags() {
         return repository.findAll();
     }
 }
