@@ -36,6 +36,16 @@ public class ActController {
     }
 
     /**
+     * Возвращает все уникальные даты создания актов из таблицы acts
+     * @return - возвращает даты
+     */
+    @PostMapping(path="/get_distinct_date")
+    public Iterable<Date> getActsDate() {
+        LOGGER.info("Возвращает Tag по id запроса страницы");
+        return service.findAllDistinctDate();
+    }
+
+    /**
      * Сохраняет объект Act
      * и возвращает его, для получения id
      * @param act - текст акта

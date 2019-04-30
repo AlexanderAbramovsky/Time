@@ -13,6 +13,10 @@ $(document).ready(function(){
 	var timeEnd;
 	var timeAll;
 
+	// переход на вкладку таймер и загружаем все акты из базы данных
+	$('#timer_menu').on('click',  function(event){
+		addActOfDiv();
+	});
 
 	//При нажатии на старт меняет иконку на стоп и обратно
 	$('#timer_button_controller').on('click',  function(event){
@@ -130,6 +134,28 @@ $(document).ready(function(){
 			 + timeStart + " " + timeEnd + " " + timeAll);
 	}
 
+	// добавляет акт в div
+	function addActOfDiv(){
 
+		//удаляем содержимое div
+		$("#content_div_all_acts").empty();
+
+		// делаем запрос на получение оригинальных дат актов из базы данных
+		$.ajax({
+			url: 'http://localhost:8080/get_distinct_date',
+			type: 'POST',
+			dataType: 'json',
+			success: function(data){
+				// проходим по всему списку data
+				$.each(data, function(index, element) {
+            		//var span_tag = getSpanTag(element.id, element.tag);
+					$('#content_div_all_acts').append(element);
+   				 });
+      		},
+      		error: function(error){
+         		alert(error);
+      		}
+		});
+	}
 
 });

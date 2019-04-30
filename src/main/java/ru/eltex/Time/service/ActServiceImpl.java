@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import ru.eltex.Time.entity.Act;
 import ru.eltex.Time.repository.ActRepository;
 
+import java.sql.Date;
 import java.util.Optional;
 
 /** Класс Service реализующий интерфейс ActService,
@@ -26,6 +27,15 @@ public class ActServiceImpl implements ActService{
     @Autowired
     public void setActRepository(ActRepository repository) {
         this.repository = repository;
+    }
+
+    /**
+     * Возвращает все уникальные даты создания актов из таблицы acts
+     * @return - возвращает даты
+     */
+    @Override
+    public Iterable<Date> findAllDistinctDate() {
+        return repository.findAllDistinctDate();
     }
 
     /**

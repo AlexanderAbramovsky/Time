@@ -6,7 +6,6 @@ $(document).ready(function(){
 
 	// переход на вкладку теги и загружаем все теги из базы данных
 	$('#tags_menu').on('click',  function(event){
-		//находится в файле tags.js
 		addTagsOfDiv();
 	});
 

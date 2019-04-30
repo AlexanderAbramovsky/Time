@@ -2,6 +2,7 @@ package ru.eltex.Time.service;
 
 import ru.eltex.Time.entity.Act;
 
+import java.sql.Date;
 import java.util.Optional;
 
 /** Интерфейс сервиса реализующий методы
@@ -15,6 +16,7 @@ public interface ActService {
     Optional<Act> getTagById(Integer id);
     void updateTag(Integer id, String tag);
     void deleteAct(Integer id);*/
+    Iterable<Date> findAllDistinctDate();
     Optional<Act> saveAct(Act tag);
     Iterable<Act> findAllAct();
 }
