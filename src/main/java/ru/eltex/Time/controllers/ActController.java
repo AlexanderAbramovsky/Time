@@ -40,8 +40,8 @@ public class ActController {
      * @return - возвращает даты
      */
     @PostMapping(path="/get_distinct_date")
-    public Iterable<Date> getActsDate() {
-        LOGGER.info("Возвращает Tag по id запроса страницы");
+    public Iterable<String> getActsDate() {
+        LOGGER.info("Возвращает все уникальные даты создания актов из таблицы acts");
         return service.findAllDistinctDate();
     }
 
@@ -61,11 +61,11 @@ public class ActController {
     public Optional<Act> saveAct(@RequestParam String act,
                                  @RequestParam String project,
                                  @RequestParam String tag,
-                                 @RequestParam Date date_act,
-                                 @RequestParam Time time_start_act,
-                                 @RequestParam Time time_end_act,
-                                 @RequestParam Time all_time_act) {
-        LOGGER.info("Сохраняет объект Act");
+                                 @RequestParam String date_act,
+                                 @RequestParam String time_start_act,
+                                 @RequestParam String time_end_act,
+                                 @RequestParam String all_time_act) {
+        LOGGER.info("Сохраняет объект Act в таблицу acts");
 
         Act tagSave = new Act(null, act, project,tag, date_act, time_start_act, time_end_act, all_time_act);
         return service.saveAct(tagSave);
@@ -77,8 +77,15 @@ public class ActController {
      */
     @PostMapping(path="/all_acts")
     public Iterable<Act> getAllActs() {
-        LOGGER.info("Возвращает все объекты типа Act из базы данных");
+        LOGGER.info("Возвращает все объекты типа Act из таблицы acts");
         return service.findAllAct();
+    }
+
+
+    @PostMapping(path="/get_acts_findDateAct")
+    public Iterable<Act> getActsFindDateAct(@RequestParam String date_act) {
+        //LOGGER.info("Возвращает объект Tag по запрашиваему тексту тега из таблицы tags");
+        return service.getActByDate(date_act);
     }
 
 }

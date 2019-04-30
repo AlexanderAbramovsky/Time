@@ -31,19 +31,19 @@ public class Act {
 
     /** Дата когда был создан акт */
     @Column(name = "date_act")
-    private Date date_act;
+    private String date_act;
 
     /** Время когда был создан акт */
     @Column(name = "time_start_act")
-    private Time time_start_act;
+    private String time_start_act;
 
     /** Время когда закончили акт */
     @Column(name = "time_end_act")
-    private Time time_end_act;
+    private String time_end_act;
 
     /** Общее время выполнения акта */
     @Column(name = "all_time_act")
-    private Time all_time_act;
+    private String all_time_act;
 
     /**
      * Пустой конструктор класса
@@ -62,8 +62,8 @@ public class Act {
      * @param time_end_act - время окончания акта
      * @param all_time_act - общее время выполнения акта
      */
-    public Act(Integer id, String act, String project, String tag, Date date_act,
-               Time time_start_act, Time time_end_act, Time all_time_act) {
+    public Act(Integer id, String act, String project, String tag, String date_act,
+               String time_start_act, String time_end_act, String all_time_act) {
         this.id = id;
         this.act = act;
         this.project = project;
@@ -72,6 +72,10 @@ public class Act {
         this.time_start_act = time_start_act;
         this.time_end_act = time_end_act;
         this.all_time_act = all_time_act;
+
+        System.out.println();
+        System.out.println(act + " " + project + " " + tag + " " +  date_act + " " +  time_start_act + " " +  time_end_act + " " +  all_time_act);
+        System.out.println();
     }
 
     /**
@@ -142,7 +146,7 @@ public class Act {
      * Возвращает дату создания акта
      * @return - возвращает дату создания проекта
      */
-    public Date getDate_act() {
+    public String getDate_act() {
         return date_act;
     }
 
@@ -150,7 +154,7 @@ public class Act {
      * Устанавливает дату создания акта
      * @param date_act - дата создания акта
      */
-    public void setDate_act(Date date_act) {
+    public void setDate_act(String date_act) {
         this.date_act = date_act;
     }
 
@@ -158,7 +162,7 @@ public class Act {
      * Возвращает время старта акта
      * @return - возвращает время старта акта
      */
-    public Time getTime_start_act() {
+    public String getTime_start_act() {
         return time_start_act;
     }
 
@@ -166,7 +170,7 @@ public class Act {
      * Устанавливает время старта акта
      * @param time_start_act - время старта акта
      */
-    public void setTime_start_act(Time time_start_act) {
+    public void setTime_start_act(String time_start_act) {
         this.time_start_act = time_start_act;
     }
 
@@ -174,7 +178,7 @@ public class Act {
      * Возвращает время окночания акта
      * @return - возвращает время окончания акта
      */
-    public Time getTime_end_act() {
+    public String getTime_end_act() {
         return time_end_act;
     }
 
@@ -182,7 +186,7 @@ public class Act {
      * Устанавливает время окончания акта
      * @param time_end_act - время окончания акта
      */
-    public void setTime_end_act(Time time_end_act) {
+    public void setTime_end_act(String time_end_act) {
         this.time_end_act = time_end_act;
     }
 
@@ -190,7 +194,7 @@ public class Act {
      * Возвращает общее время действия акта
      * @return - Возвращает общее время действия акта
      */
-    public Time getAll_time_act() {
+    public String getAll_time_act() {
         return all_time_act;
     }
 
@@ -198,7 +202,7 @@ public class Act {
      * Устанавливает общее время действия акта
      * @param all_time_act - общее время действия акта
      */
-    public void setAll_time_act(Time all_time_act) {
+    public void setAll_time_act(String all_time_act) {
         this.all_time_act = all_time_act;
     }
 }

@@ -16,7 +16,9 @@ public interface ActService {
     Optional<Act> getTagById(Integer id);
     void updateTag(Integer id, String tag);
     void deleteAct(Integer id);*/
-    Iterable<Date> findAllDistinctDate();
+
+    Iterable<Act> getActByDate(String date_act);
+    Iterable<String> findAllDistinctDate();
     Optional<Act> saveAct(Act tag);
     Iterable<Act> findAllAct();
 }

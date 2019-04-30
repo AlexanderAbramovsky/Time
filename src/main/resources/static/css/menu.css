@@ -7,14 +7,13 @@ body{
 /*__________________________Блок таймера______________________________*/
 .timer{
 	background: white;
-	width: 100%;
+	width: calc(80% - 20px);
 	height: 60px;
-	-webkit-box-shadow: 0 10px 6px -6px #777;
-       -moz-box-shadow: 0 10px 6px -6px #777;
-            box-shadow: 0 10px 6px -6px #777;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
     display: flex;
 	justify-content: left;
 	align-items: center;
+	position: fixed;
 }
 
 #timer_text{
@@ -81,7 +80,129 @@ body{
 	background: #03A9F4;
 }
 
-/*блок контента*/
+/*Блок_Дня*/
+
+#content_div_all_acts{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	display:inline-block;
+	margin-top: 50px;
+}
+
+.div_day_act{
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display:inline-block;
+	width: 100%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+	background: #B3E5FC;
+}
+
+.day_inform{ 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	font-size: 30px;
+	font-weight: bold;
+	color: #0288D1;
+}
+
+.right_day_inform{
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.button_delete_day{
+	margin-left: 20px;
+	margin-right: 20px;
+	outline: none;
+  	height: 35px;
+  	width: 35px;
+  	border: none;
+  	cursor: pointer;
+  	background: url("../img/delete_day.png") no-repeat;
+	background-size: 35px 35px;
+}
+
+.labal_day_inform{
+	margin-left: 20px; 
+}
+
+/*Блок_Акта*/
+.div_act{
+	padding: 6px;
+	background: white;
+	border-top: 1px solid;
+	border-color: #03A9F4;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.div_act_text{
+	width: calc(100% - 650px);
+	border: none;
+	outline: none;
+	padding-left: 30px;
+	text-overflow: ellipsis;
+	font-size: 20px;
+	color: #0288D1;
+}
+
+.timer_button{
+	margin-left: 30px; 
+	outline: none;
+  	height: 30px;
+  	width: 30px;
+  	border: none;
+  	cursor: pointer;
+}
+
+.timer_button_tag{
+	background: url("../img/tag.png") no-repeat;
+	background-size: 30px 30px;
+}
+
+.timer_button_project{
+	background: url("../img/project.png") no-repeat;
+	background-size: 30px 30px;
+}
+
+.timer_span_start_end{
+	margin-left: 50px;
+	padding: 5px;
+	font-size: 20px;
+	color: #BDC3C7;
+}
+
+.timer_span_all{
+	margin-left: 20px;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px; 
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 10px;
+	background: #ECF0F1;
+	color: #0288D1;
+}
+
+.timer_button_delete{	
+	margin-right: 20px;
+	height: 25px;
+  	width: 25px;
+	background: url("../img/delete_day.png") no-repeat;
+	background-size: 25px 25px;
+}
+
+/*_______________________блок контента_______________________________*/
 #content{
 	position: absolute;
 	width: calc(80% - 20px); 
@@ -144,7 +265,7 @@ body{
  background: white; 
 }
 
-/*____________блок_тегов__________________*/
+/*____________________блок_тегов_____________________________*/
 .div_add_tag{
 	display: flex;
 	justify-content: center;

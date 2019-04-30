@@ -50,11 +50,19 @@ $(document).ready(function(){
 
 	function startTimer(){
 
-			date = new Date();
+			var date = new Date();
+
+			var dayDate = ((date.getDate() < 10) ? "0" : "") + date.getDate();
+			var monthDate = (((date.getMonth() + 1) < 10) ? "0" : "") + (date.getMonth() + 1);
+
+			var hoursDate = ((date.getHours() < 10) ? "0" : "") + date.getHours();
+			var minutesDate = ((date.getMinutes() < 10) ? "0" : "") + date.getMinutes();
+			var secondsDate = ((date.getSeconds() < 10) ? "0" : "") + date.getSeconds();
 
 			// настройка текущей даты для передачи json
-			dateAct = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
-			timeStart = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+			dateAct = date.getFullYear() + "-" + monthDate + "-" + dayDate;
+
+			timeStart = hoursDate + ":" + minutesDate + ":" + secondsDate;
 
 			var seconds = 0;
 			var minutes = 0;
@@ -95,20 +103,27 @@ $(document).ready(function(){
 
 	function stopTimer(){
 
-		date = new Date();
+		var date = new Date();
 
-		timeEnd = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+		var hoursDate = ((date.getHours() < 10) ? "0" : "") + date.getHours();
+		var minutesDate = ((date.getMinutes() < 10) ? "0" : "") + date.getMinutes();
+		var secondsDate = ((date.getSeconds() < 10) ? "0" : "") + date.getSeconds();
+
+		timeEnd = hoursDate + ":" + minutesDate + ":" + secondsDate;
 		timeAll = $('#timer_span').text();
-
-		clearInterval(timer);
-		$('#timer_text').val("");
-		$('#timer_span').text("00:00:00");
-
 		act = $('#timer_text').val();
 
 		if(act == ""){
 			act = "Добавить описание...";
 		}
+
+		clearInterval(timer);
+		$('#timer_text').val("");
+		$('#timer_span').text("00:00:00");
+
+
+		alert(act + " " + project + " " + tag + " " + dateAct + " "
+			 + timeStart + " " + timeEnd + " " + timeAll);
 
 		$.ajax({
 			url: 'http://localhost:8080/save_act',
@@ -130,8 +145,6 @@ $(document).ready(function(){
 					} 
 		});
 		
-		alert(act + " " + project + " " + tag + " " + dateAct + " "
-			 + timeStart + " " + timeEnd + " " + timeAll);
 	}
 
 	// добавляет акт в div
@@ -145,11 +158,127 @@ $(document).ready(function(){
 			url: 'http://localhost:8080/get_distinct_date',
 			type: 'POST',
 			dataType: 'json',
-			success: function(data){
-				// проходим по всему списку data
-				$.each(data, function(index, element) {
+			success: function(date){
+				// проходим по всему списку date
+				$.each(date, function(index, element) {
+					var year = element[0] + element[1] + element[2] + element[3];
+					var month = element[5] + element[6];
+					var day = element[8] + element[9];
+
+					var id_day = day + "." + month + "." + year;
+
+					var div_day_act = $('<div>', {
+										class: 'div_day_act',
+										id: "div_day_act" + id_day
+									});
+
+						var day_inform = $('<div>', {
+											class: 'day_inform',
+											id: "day_inform" + id_day
+										});
+
+							var labal_day_inform = $('<label>', {
+												text: id_day,
+												class: 'labal_day_inform',
+												id: "labal_day_inform" + id_day
+											});
+
+						var right_day_inform = $('<div>', {
+											class: 'right_day_inform',
+											id: "right_day_inform" + id_day
+										});
+
+							var labal_all_time_right_day = $('<label>', {
+												text: "00:12:34",
+												id: "labal_all_time_right_day" + id_day
+											});
+
+							var button_delete_day = $('<button>', {
+												class: 'button_delete_day',
+												id: "button_delete_day" + id_day
+											});
+
+							right_day_inform.append(labal_all_time_right_day);
+							right_day_inform.append(button_delete_day);
+
+							day_inform.append(labal_day_inform);
+							day_inform.append(right_day_inform);
+
+							div_day_act.append(day_inform);
+
+
+					$.ajax({
+						url: 'http://localhost:8080/get_acts_findDateAct',
+						type: 'POST',
+						dataType: 'json',
+						data: {date_act: year + "-" + month + "-" + day},
+						success: function(acts){
+							$.each(acts, function(index, element) {
+								
+								var id = element.id;
+
+								var div_act = $('<div>', {
+											class: 'div_act',
+											id: "div_act" + id
+										});
+
+								var textAct = acts.act;
+								if(textAct == "Добавьте описание..."){
+									textAct = "";
+								}
+
+								var div_act_text = $('<input>', {
+											type: "text",
+											placeholder: "Добавьте описание...",
+											val: textAct,
+											class: 'div_act_text',
+											id: "div_act_text" + id
+										});
+								
+								var timer_button_project = $('<button>', {
+												class: 'timer_button timer_button_project',
+												id: "timer_button_project" + id
+											});
+
+								var timer_button_tag = $('<button>', {
+												class: 'timer_button timer_button_tag',
+												id: "timer_button_tag" + id
+											});
+
+								var timer_span_start_end = $('<span>', {
+												text: element.time_start_act + " - " + element.time_end_act,
+												class: 'timer_span_start_end',
+												id: "timer_span_start_end" + id
+											});
+
+								var timer_span_all = $('<span>', {
+												text: element.all_time_act,
+												class: 'timer_span_all',
+												id: "timer_span_all" + id
+											});
+
+								var timer_button_delete = $('<button>', {
+												class: 'timer_button timer_button_delete',
+												id: "timer_button_delete" + id
+											});
+
+								div_act.append(div_act_text);
+								div_act.append(timer_button_project);
+								div_act.append(timer_button_tag);
+								div_act.append(timer_span_start_end);
+								div_act.append(timer_span_all);
+								div_act.append(timer_button_delete);
+
+								div_day_act.append(div_act);
+							});
+						}
+					});
+					
+
+					$('#content_div_all_acts').append(div_day_act);
+
             		//var span_tag = getSpanTag(element.id, element.tag);
-					$('#content_div_all_acts').append(element);
+					//$('#content_div_all_acts').append(day + "." + month + "." + year + "___________");
    				 });
       		},
       		error: function(error){

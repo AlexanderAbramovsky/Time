@@ -6,6 +6,8 @@ import ru.eltex.Time.entity.Act;
 import ru.eltex.Time.repository.ActRepository;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Optional;
 
 /** Класс Service реализующий интерфейс ActService,
@@ -29,12 +31,19 @@ public class ActServiceImpl implements ActService{
         this.repository = repository;
     }
 
+
+    @Override
+    public Iterable<Act> getActByDate(String date_act) {
+        return repository.findOneByDateAct(date_act);
+    }
+
     /**
      * Возвращает все уникальные даты создания актов из таблицы acts
+     * отрезаем время от даты т.к. в таблице используется тип данных DateTime
      * @return - возвращает даты
      */
     @Override
-    public Iterable<Date> findAllDistinctDate() {
+    public Iterable<String> findAllDistinctDate() {
         return repository.findAllDistinctDate();
     }
 
