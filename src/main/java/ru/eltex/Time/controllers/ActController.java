@@ -2,15 +2,12 @@ package ru.eltex.Time.controllers;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.eltex.Time.entity.Act;
 import ru.eltex.Time.service.ActService;
 
-import java.sql.Date;
-import java.sql.Time;
 import java.util.Optional;
 
 /** REST контроллер управления таблицей acts базы данных mysql
@@ -33,6 +30,13 @@ public class ActController {
     public void setTagService(ActService service) {
         LOGGER.info("создание сервиса управления таблецей acts");
         this.service = service;
+    }
+
+
+    @PostMapping(path="/get_all_time_date")
+    public String getAllTimeDate(String date_act) {
+      //  LOGGER.info("Возвращает все уникальные даты создания актов из таблицы acts");
+        return service.getAllTimeDate(date_act);
     }
 
     /**
@@ -84,7 +88,7 @@ public class ActController {
 
     @PostMapping(path="/get_acts_findDateAct")
     public Iterable<Act> getActsFindDateAct(@RequestParam String date_act) {
-        //LOGGER.info("Возвращает объект Tag по запрашиваему тексту тега из таблицы tags");
+        LOGGER.info("Возвращает объекты Act по запрашиваемой дате создания акта из таблицы acts");
         return service.getActByDate(date_act);
     }
 

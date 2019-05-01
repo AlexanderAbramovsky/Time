@@ -72,10 +72,6 @@ public class Act {
         this.time_start_act = time_start_act;
         this.time_end_act = time_end_act;
         this.all_time_act = all_time_act;
-
-        System.out.println();
-        System.out.println(act + " " + project + " " + tag + " " +  date_act + " " +  time_start_act + " " +  time_end_act + " " +  all_time_act);
-        System.out.println();
     }
 
     /**

@@ -31,10 +31,56 @@ public class ActServiceImpl implements ActService{
         this.repository = repository;
     }
 
-
+    /**
+     * Возвращает все акты за определенный день
+     * @param date_act - дата создания акта
+     * @return - возвращает акты за определенный день
+     */
     @Override
     public Iterable<Act> getActByDate(String date_act) {
         return repository.findOneByDateAct(date_act);
+    }
+
+    /**
+     * Возвращает общее время актов за определенный день
+     * @param date_act - дата акта за который нужно получить общее время
+     * @return - время
+     */
+    @Override
+    public String getAllTimeDate(String date_act) {
+
+        Iterable<Act> acts = getActByDate(date_act);
+
+        int seconds = 0;
+        int minutes = 0;
+        int hours = 0;
+
+        for (Act act: acts) {
+            String all_time_act = act.getAll_time_act();
+            String[] time = all_time_act.split(":");
+
+            seconds += Integer.parseInt(time[2]);
+
+            if(seconds > 59){
+                minutes += 1;
+                seconds -= 60;
+            }
+
+            minutes += Integer.parseInt(time[1]);
+
+            if(minutes > 59){
+                hours += 1;
+                minutes -= 60;
+            }
+
+            hours += Integer.parseInt(time[0]);
+        }
+
+        String hoursStr = ((hours < 10) ? "0" : "") + hours;
+        String minutesStr = ((minutes < 10) ? "0" : "") + minutes;
+        String secondsStr = ((seconds < 10) ? "0" : "") + seconds;
+
+        return hoursStr + ":" + minutesStr + ":" + secondsStr;
     }
 
     /**
