@@ -17,6 +17,8 @@ public interface ActService {
     void updateTag(Integer id, String tag);
     void deleteAct(Integer id);*/
 
+    Optional<Act> getActById(Integer id);
+    void updateAct(Integer id, String act);
     String getAllTimeDate(String date_act);
     Iterable<Act> getActByDate(String date_act);
     Iterable<String> findAllDistinctDate();

@@ -31,6 +31,19 @@ public class ActServiceImpl implements ActService{
         this.repository = repository;
     }
 
+
+    @Override
+    public Optional<Act> getActById(Integer id) {
+        return repository.findById(id);
+    }
+
+    @Override
+    public void updateAct(Integer id, String act) {
+        Optional<Act> updated = repository.findById(id);
+        updated.get().setAct(act);
+        repository.save(updated.get());
+    }
+
     /**
      * Возвращает все акты за определенный день
      * @param date_act - дата создания акта

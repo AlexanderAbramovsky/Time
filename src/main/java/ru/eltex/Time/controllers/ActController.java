@@ -35,7 +35,7 @@ public class ActController {
 
     @PostMapping(path="/get_all_time_date")
     public String getAllTimeDate(String date_act) {
-      //  LOGGER.info("Возвращает все уникальные даты создания актов из таблицы acts");
+        LOGGER.info("общее время всех актов даты-" + date_act);
         return service.getAllTimeDate(date_act);
     }
 
@@ -47,6 +47,12 @@ public class ActController {
     public Iterable<String> getActsDate() {
         LOGGER.info("Возвращает все уникальные даты создания актов из таблицы acts");
         return service.findAllDistinctDate();
+    }
+
+    @PostMapping(path="/update_act")
+    public void updateTag(@RequestParam Integer id, @RequestParam String act) {
+       // LOGGER.info("Обновляет запрашиваемый объект Tag из таблицы tags");
+        service.updateAct(id, act);
     }
 
     /**

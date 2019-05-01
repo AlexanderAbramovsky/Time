@@ -250,7 +250,16 @@ $(document).ready(function(){
 								placeholder: "Добавьте описание...",
 								val: textAct,
 								class: 'div_act_text',
-								id: "div_act_text" + id
+								id: "div_act_text" + id,
+								on: {
+            						change: function(event){
+            							$.ajax({
+											url: 'http://localhost:8080/update_act',
+											type: 'POST',
+											data: {id: id, act: div_act_text.val()},
+											});	
+            						}
+            					}	
 							});
 								
 		var timer_button_project = $('<button>', {
