@@ -128,10 +128,6 @@ $(document).ready(function(){
 		$('#timer_text').val("");
 		$('#timer_span').text("00:00:00");
 
-
-		alert(act + " " + project + " " + tag + " " + dateAct + " "
-			 + timeStart + " " + timeEnd + " " + timeAll);
-
 		$.ajax({
 			url: 'http://localhost:8080/save_act',
 			type: 'POST',
@@ -146,9 +142,30 @@ $(document).ready(function(){
 				all_time_act: timeAll
 			},
 			success: function(data){
-						alert(data.id + " " + data.act + " " + data.project + " "
-							+ data.tag + " " + data.date_act + " " + data.time_start_act + " " 
-							+ data.time_end_act + " " + data.all_time_act);
+
+						var element = data.date_act;
+						var year = element[0] + element[1] + element[2] + element[3];
+						var month = element[5] + element[6];
+						var day = element[8] + element[9];
+						var id_day = day + "." + month + "." + year;
+						var thisDay = "div_day_act" + id_day;
+
+						var lastDay = $('#content_div_all_acts .div_day_act:first').attr( "id");
+
+						//если событие происходит в текущем дне то записываем его туда,
+						//если нет создаем новый день
+						if(lastDay ==  thisDay){
+							var div_act = getDivAct(data);
+							$('#content_div_all_acts .div_day_act:first').append(div_act);
+
+    					} else {
+							var jsonData = year + "-" + month + "-" + day;
+							var div_day_act = getDivDayAct(id_day, jsonData);
+							var	div_act = getDivAct(data);
+
+							div_day_act.append(div_act);
+							$('#content_div_all_acts').prepend(div_day_act);
+    					}
 					} 
 		});
 	}
@@ -278,6 +295,7 @@ $(document).ready(function(){
 
 		//удаляем содержимое div
 		$("#content_div_all_acts").empty();
+		$("#content_div_all_acts").fadeIn();
 
 		// делаем запрос на получение оригинальных дат актов из базы данных
 		$.ajax({

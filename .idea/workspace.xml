@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee4f3aef-60be-43ca-a58e-5b79a3b6b0c7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/controllers/ActController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/controllers/ActController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/entity/Act.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/entity/Act.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/service/ActService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/service/ActService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/service/ActServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/service/ActServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/js/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/static/js/time.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/entity/Act.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/entity/Act.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/time.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -116,17 +106,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1139#1140#0" expanded="true" />
-                <element signature="e#1199#1200#0" expanded="true" />
-                <element signature="e#2582#2583#0" expanded="true" />
-                <element signature="e#2637#2638#0" expanded="true" />
-                <element signature="e#3068#3069#0" expanded="true" />
-                <element signature="e#3111#3112#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-869">
+              <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -852,7 +833,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17986578" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -863,7 +843,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38439715" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6042553" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1144,17 +1124,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1139#1140#0" expanded="true" />
-            <element signature="e#1199#1200#0" expanded="true" />
-            <element signature="e#2582#2583#0" expanded="true" />
-            <element signature="e#2637#2638#0" expanded="true" />
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3111#3112#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-869">
+          <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
         </state>
       </provider>
     </entry>

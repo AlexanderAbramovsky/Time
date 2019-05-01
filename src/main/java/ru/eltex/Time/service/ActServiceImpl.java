@@ -34,7 +34,7 @@ public class ActServiceImpl implements ActService{
     /**
      * Возвращает все акты за определенный день
      * @param date_act - дата создания акта
-     * @return - возвращает акты за определенный день
+     * @return - возвращает акты за опр еделенный день
      */
     @Override
     public Iterable<Act> getActByDate(String date_act) {
