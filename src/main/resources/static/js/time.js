@@ -3,6 +3,9 @@ $(document).ready(function(){
 	var flagTime = 0;
 	var timer;
 
+	var idDeleteAct;
+	var dateDeleteDay;
+
 	var seconds = 0;
 	var minutes = 0;
 	var hours = 0;
@@ -40,8 +43,7 @@ $(document).ready(function(){
 			$('#timer_button_bucket').hide();
 			stopTimer();
 			flagTime = 0;
-		}
-		
+		}	
 	});
 
 	//При нажатии сбрасывает таймер
@@ -149,17 +151,36 @@ $(document).ready(function(){
 						var day = element[8] + element[9];
 						var id_day = day + "." + month + "." + year;
 						var thisDay = "div_day_act" + id_day;
+						var jsonData = year + "-" + month + "-" + day;
 
 						var lastDay = $('#content_div_all_acts .div_day_act:first').attr( "id");
 
 						//если событие происходит в текущем дне то записываем его туда,
 						//если нет создаем новый день
 						if(lastDay ==  thisDay){
+
+							var allTime;
+
+							$.ajax({
+								url: 'http://localhost:8080/get_all_time_date',
+								type: 'POST',
+								dataType: 'text',
+								data: {date_act: jsonData},
+								async: false,
+								success: function(time){		
+									allTime = time;
+								},
+								error: function(error){
+									alert(error);
+								}
+							});
+
+							$('.right_day_inform label:first').text(allTime);
+
 							var div_act = getDivAct(data);
 							$('#content_div_all_acts .div_day_act:first').append(div_act);
 
     					} else {
-							var jsonData = year + "-" + month + "-" + day;
 							var div_day_act = getDivDayAct(id_day, jsonData);
 							var	div_act = getDivAct(data);
 
@@ -212,16 +233,12 @@ $(document).ready(function(){
 
 		var labal_all_time_right_day = $('<label>', {
 							id: "labal_all_time_right_day" + id_day,
-							text: allTime
+							text: allTime,
+							style: "margin-right: 20px"
 						});
 
-		var button_delete_day = $('<button>', {
-							class: 'button_delete_day',
-							id: "button_delete_day" + id_day
-						});
 
 		right_day_inform.append(labal_all_time_right_day);
-		right_day_inform.append(button_delete_day);
 
 		day_inform.append(labal_day_inform);
 		day_inform.append(right_day_inform);
@@ -286,7 +303,14 @@ $(document).ready(function(){
 
 		var timer_button_delete = $('<button>', {
 										class: 'timer_button timer_button_delete',
-										id: "timer_button_delete" + id
+										id: "timer_button_delete" + id,
+										on: {
+            								click: function(event){
+            									// запоминаем id и текст тега
+            									idDeleteAct = id;
+                								$('#overlay_delete_act').fadeIn(); // открываем модальное окно обновления тега
+            								}
+            							}	
 									});
 
 		div_act.append(div_act_text);
@@ -345,5 +369,32 @@ $(document).ready(function(){
       		}
 		});
 	}
+
+	//__________Модальные_окна___________________
+
+	//закрытие модального окна удаления записи
+	$('#button_delete_act_cancel').on('click',  function(event){
+		$('.overlay').fadeOut();
+	});
+
+	//удаление акта через модальное окно
+	$('#button_delete_act').on('click',  function(event){
+
+		$.ajax({
+			url: 'http://localhost:8080/delete_act',
+			type: 'POST',
+			data: {id: idDeleteAct}, 
+			async: false
+		});
+
+
+		addActOfDiv();
+		$('.overlay').fadeOut();
+	});
+
+	//закрытие модального окна
+	$('.close_popup').on('click',  function(event){
+		$('.overlay').fadeOut();
+	});
 
 });

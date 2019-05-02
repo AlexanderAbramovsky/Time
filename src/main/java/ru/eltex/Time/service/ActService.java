@@ -9,14 +9,10 @@ import java.util.Optional;
  *  нужные пользователю для работы с таблицей acts
  *  базы данных mysql
  * @author Абрамовский Александр sahan.abr@yandex.ru
- * @version 1.0.0
+ * @version 1.3.0
  */
 public interface ActService {
-    /*Optional<Act> getTagByTagText(String tag);
-    Optional<Act> getTagById(Integer id);
-    void updateTag(Integer id, String tag);
-    void deleteAct(Integer id);*/
-
+    void deleteAct(Integer id);
     Optional<Act> getActById(Integer id);
     void updateAct(Integer id, String act);
     String getAllTimeDate(String date_act);

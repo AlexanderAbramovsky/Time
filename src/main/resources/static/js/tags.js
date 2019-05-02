@@ -174,9 +174,7 @@ $(document).ready(function(){
 
 		$('.overlay').fadeOut();
 
-		$('#span_tag' + idUpdateTeg).remove();
-
-		
+		$('#span_tag' + idUpdateTeg).remove();	
 	});
 
 	//закрытие модального окна удаления тега

@@ -14,7 +14,7 @@ import java.util.Optional;
  *  реализует методы для работы с таблицей acts
  *  бызы данных mysql
  * @author Абрамовский Александр sahan.abr@yandex.ru
- * @version 1.0.0
+ * @version 1.3.0
  */
 @Service
 public class ActServiceImpl implements ActService{
@@ -31,12 +31,30 @@ public class ActServiceImpl implements ActService{
         this.repository = repository;
     }
 
+    /**
+     * Удаляем акт по его id
+     * @param id - id акта
+     */
+    @Override
+    public void deleteAct(Integer id) {
+        repository.deleteById(id);
+    }
 
+    /**
+     * Возвращает Act по его id
+     * @param id - id акта
+     * @return - возвращает Act
+     */
     @Override
     public Optional<Act> getActById(Integer id) {
         return repository.findById(id);
     }
 
+    /**
+     * Обновляет текст акта по его id
+     * @param id - id акта
+     * @param act - новый текст акта
+     */
     @Override
     public void updateAct(Integer id, String act) {
         Optional<Act> updated = repository.findById(id);

@@ -2,6 +2,7 @@ package ru.eltex.Time.controllers;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +13,7 @@ import java.util.Optional;
 
 /** REST контроллер управления таблицей acts базы данных mysql
  * @author Абрамовский Александр sahan.abr@yandex.ru
- * @version 1.0.0
+ * @version 1.3.0
  */
 @RestController
 public class ActController {
@@ -32,7 +33,21 @@ public class ActController {
         this.service = service;
     }
 
+    /**
+     * Удаляет запрашиваемый объект Act из базы данных
+     * @param id - id запрашиваемого объекта
+     */
+    @PostMapping(path="/delete_act")
+    public void deleteAct(@RequestParam int id) {
+        LOGGER.info("Удаляет объект Act из таблицы acts id-" + id);
+        service.deleteAct(id);
+    }
 
+    /**
+     * Возвращает общее время актов по переданной дате
+     * @param date_act - дата
+     * @return - общее время выполнее актов
+     */
     @PostMapping(path="/get_all_time_date")
     public String getAllTimeDate(String date_act) {
         LOGGER.info("общее время всех актов даты-" + date_act);
@@ -49,9 +64,14 @@ public class ActController {
         return service.findAllDistinctDate();
     }
 
+    /**
+     * Обновляет текст акта по его id
+     * @param id - id обновляемого акта
+     * @param act - новый текст акта
+     */
     @PostMapping(path="/update_act")
     public void updateTag(@RequestParam Integer id, @RequestParam String act) {
-       // LOGGER.info("Обновляет запрашиваемый объект Tag из таблицы tags");
+        LOGGER.info("Обновляет запрашиваемый объект Act из таблицы tags id-" + id);
         service.updateAct(id, act);
     }
 
@@ -91,10 +111,14 @@ public class ActController {
         return service.findAllAct();
     }
 
-
+    /**
+     * Возвращает объекты Act по запрашиваемой дате создания акта из таблицы acts
+     * @param date_act - дата по которой будет проходить выборка
+     * @return - возвращает все акты по заданной дате
+     */
     @PostMapping(path="/get_acts_findDateAct")
     public Iterable<Act> getActsFindDateAct(@RequestParam String date_act) {
-        LOGGER.info("Возвращает объекты Act по запрашиваемой дате создания акта из таблицы acts");
+        LOGGER.info("Возвращает объекты Act по запрашиваемой дате создания акта из таблицы acts date-" + date_act);
         return service.getActByDate(date_act);
     }
 

@@ -112,12 +112,13 @@ body{
 	color: #0288D1;
 }
 
-.right_day_inform{
+.right_day_inform{	
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 }
+
 
 .button_delete_day{
 	margin-left: 20px;
@@ -380,6 +381,7 @@ body{
 	height: 100vh;
 	top: 0;
 	left: 0;
+	position: fixed;
 	/*прозрачность*/
 	background-color: rgba(0,0,0,.8); 
 	display: none;
