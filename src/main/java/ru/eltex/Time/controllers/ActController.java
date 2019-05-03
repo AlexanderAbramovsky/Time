@@ -88,6 +88,17 @@ public class ActController {
         service.deleteTagAct(id, tag);
     }
 
+    @PostMapping(path="/delete_tag_all_act")
+    public void deleteAllTagAct(@RequestParam String tag) {
+        //LOGGER.info("Обновляет запрашиваемый объект Act из таблицы tags id-" + id);
+        service.deleteAllTagAct(tag);
+    }
+
+    @PostMapping(path="/get_act_findById")
+    public Optional<Act> getActsFindDateAct(@RequestParam Integer id) {
+        return service.getActById(id);
+    }
+
     /**
      * Сохраняет объект Act
      * и возвращает его, для получения id
@@ -133,11 +144,5 @@ public class ActController {
     public Iterable<Act> getActsFindDateAct(@RequestParam String date_act) {
         LOGGER.info("Возвращает объекты Act по запрашиваемой дате создания акта из таблицы acts date-" + date_act);
         return service.getActByDate(date_act);
-    }
-
-
-    @PostMapping(path="/get_act_findById")
-    public Optional<Act> getActsFindDateAct(@RequestParam Integer id) {
-        return service.getActById(id);
     }
 }

@@ -513,7 +513,6 @@ $(document).ready(function(){
 					}
 				}
 			});
-
 		$('.overlay_add_tag_of_act').fadeOut();
 	});
 
@@ -529,10 +528,12 @@ $(document).ready(function(){
 				data: {id: idTagTest},
 				async: false,
 				success: function(act){
-					if(act.tag != ""){
-						tagButton.css("border-color", "#2fc0a7");
-					} else {
-						tagButton.css("border-color", "white");
+					if(act != null){
+						if(act.tag != ""){
+							tagButton.css("border-color", "#2fc0a7");
+						} else {
+							tagButton.css("border-color", "white");
+						}
 					}
 				}
 			});

@@ -17,7 +17,7 @@ body{
 }
 
 #timer_text{
-	width: calc(100% - 450px);
+	width: calc(100% - 330px);
 	height: calc(100% - 10px);
 	border: none;
 	outline: none;
@@ -26,25 +26,6 @@ body{
 	text-overflow: ellipsis;
 	font-size: 30px;
 	color: #0288D1;
-}
-
-.timer_button{
-	margin-left: 30px; 
-	outline: none;
-  	height: 40px;
-  	width: 40px;
-  	border: none;
-  	cursor: pointer;
-}
-
-#timer_button_tag{
-	background: url("../img/tag.png") no-repeat;
-	background-size: 30px 30px;
-}
-
-#timer_button_project{
-	background: url("../img/project.png") no-repeat;
-	background-size: 30px 30px;
 }
 
 .timer_button_controller{
@@ -564,4 +545,39 @@ body{
 	display:inline-block;
 	margin: 20px;
 	font-size: 25px;
+}
+
+/*____________________Настройка_Блока_Отчётов_______________________________________*/
+
+/*Блок Диаграмы*/
+.diagram{
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	width: 800px;
+	height: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display:inline-block;
+}
+
+.controller_div_weeks{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.controller_button_weeks{
+	background-color: white;
+	color: #1e90ff;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.controller_button_weeks:hover {
+  color: #B3E5FC;
 }

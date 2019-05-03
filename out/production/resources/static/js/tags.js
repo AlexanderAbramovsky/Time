@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	// нужны для удаления и обновления тега
 	var idUpdateTeg;
-	var textUpdateTeg;
+	var textDeleteTeg;
 
 	// переход на вкладку теги и загружаем все теги из базы данных
 	$('#tags_menu').on('click',  function(event){
@@ -107,6 +107,8 @@ $(document).ready(function(){
 						on: {
             				click: function(event){
             					//запоминаем id тега
+            					textDeleteTeg = text;
+            					
             					idUpdateTeg = id;
             					$('#overlay_delete').fadeIn();
             				}
@@ -170,6 +172,12 @@ $(document).ready(function(){
 			url: 'http://localhost:8080/delete_tag',
 			type: 'POST',
 			data: {id: idUpdateTeg} // 
+		});
+
+		$.ajax({
+			url: 'http://localhost:8080/delete_tag_all_act',
+			type: 'POST',
+			data: {tag: textDeleteTeg}  
 		});
 
 		$('.overlay').fadeOut();

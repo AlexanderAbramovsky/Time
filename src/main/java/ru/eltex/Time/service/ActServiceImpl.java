@@ -100,6 +100,34 @@ public class ActServiceImpl implements ActService{
         repository.save(updated.get());
     }
 
+    @Override
+    public void deleteAllTagAct(String tag) {
+        Iterable<Act> acts = findAllAct();
+
+        for (Act act: acts) {
+            String[] tmp = act.getTag().split("-;-");
+            String newTag = "";
+
+            if (tmp.length == 1){
+
+            }
+            for (int i = 0; i < tmp.length; i++){
+
+                if (i == tmp.length-1 && !tmp[i].equals(tag)){
+                    newTag += tmp[i];
+                    continue;
+                }
+
+                if(!tmp[i].equals(tag)){
+                    newTag += tmp[i] + "-;-" ;
+                }
+            }
+            act.setTag(newTag);
+            repository.save(act);
+
+        }
+    }
+
     /**
      * Возвращает все акты за определенный день
      * @param date_act - дата создания акта

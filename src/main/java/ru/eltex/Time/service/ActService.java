@@ -13,6 +13,7 @@ import java.util.Optional;
  */
 public interface ActService {
 
+    void deleteAllTagAct(String tag);
     void deleteTagAct(Integer id, String tag);
     void addTagAct(Integer id, String tag);
     void deleteAct(Integer id);
