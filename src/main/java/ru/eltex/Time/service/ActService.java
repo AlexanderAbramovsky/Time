@@ -12,6 +12,9 @@ import java.util.Optional;
  * @version 1.3.0
  */
 public interface ActService {
+
+    void deleteTagAct(Integer id, String tag);
+    void addTagAct(Integer id, String tag);
     void deleteAct(Integer id);
     Optional<Act> getActById(Integer id);
     void updateAct(Integer id, String act);

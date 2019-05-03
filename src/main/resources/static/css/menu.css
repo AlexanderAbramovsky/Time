@@ -31,8 +31,8 @@ body{
 .timer_button{
 	margin-left: 30px; 
 	outline: none;
-  	height: 30px;
-  	width: 30px;
+  	height: 40px;
+  	width: 40px;
   	border: none;
   	cursor: pointer;
 }
@@ -160,20 +160,25 @@ body{
 .timer_button{
 	margin-left: 30px; 
 	outline: none;
-  	height: 30px;
-  	width: 30px;
+  	height: 40px;
+  	width: 40px;
   	border: none;
   	cursor: pointer;
 }
 
 .timer_button_tag{
 	background: url("../img/tag.png") no-repeat;
+	border: 3px solid;
+	border-color: white;	
+	border-radius: 5px;
+	background-position:center;
 	background-size: 30px 30px;
 }
 
 .timer_button_project{
 	background: url("../img/project.png") no-repeat;
 	background-size: 30px 30px;
+	background-position:center;
 }
 
 .timer_span_start_end{

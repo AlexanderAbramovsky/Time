@@ -75,6 +75,19 @@ public class ActController {
         service.updateAct(id, act);
     }
 
+
+    @PostMapping(path="/add_tag_act")
+    public void addTagAct(@RequestParam Integer id, @RequestParam String tag) {
+        //LOGGER.info("Обновляет запрашиваемый объект Act из таблицы tags id-" + id);
+        service.addTagAct(id, tag);
+    }
+
+    @PostMapping(path="/delete_tag_act")
+    public void deleteTagAct(@RequestParam Integer id, @RequestParam String tag) {
+        //LOGGER.info("Обновляет запрашиваемый объект Act из таблицы tags id-" + id);
+        service.deleteTagAct(id, tag);
+    }
+
     /**
      * Сохраняет объект Act
      * и возвращает его, для получения id
@@ -122,4 +135,9 @@ public class ActController {
         return service.getActByDate(date_act);
     }
 
+
+    @PostMapping(path="/get_act_findById")
+    public Optional<Act> getActsFindDateAct(@RequestParam Integer id) {
+        return service.getActById(id);
+    }
 }

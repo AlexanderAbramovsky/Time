@@ -62,6 +62,44 @@ public class ActServiceImpl implements ActService{
         repository.save(updated.get());
     }
 
+    @Override
+    public void deleteTagAct(Integer id, String tag) {
+        Optional<Act> updated = repository.findById(id);
+        String[] tmp = updated.get().getTag().split("-;-");
+        String newTag = "";
+
+        if (tmp.length == 1){
+
+        }
+
+        for (int i = 0; i < tmp.length; i++){
+
+            if (i == tmp.length-1 && !tmp[i].equals(tag)){
+                newTag += tmp[i];
+                continue;
+            }
+
+            if(!tmp[i].equals(tag)){
+                newTag += tmp[i] + "-;-" ;
+            }
+        }
+        updated.get().setTag(newTag);
+        repository.save(updated.get());
+
+    }
+
+    @Override
+    public void addTagAct(Integer id, String tag) {
+        Optional<Act> updated = repository.findById(id);
+        String tmp =  updated.get().getTag();
+        if(tmp.equals("")){
+            updated.get().setTag(tag);
+        } else {
+            updated.get().setTag(tmp + "-;-" + tag);
+        }
+        repository.save(updated.get());
+    }
+
     /**
      * Возвращает все акты за определенный день
      * @param date_act - дата создания акта
