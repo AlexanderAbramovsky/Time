@@ -495,3 +495,68 @@ body{
 	display:inline-block;
 	text-overflow: ellipsis;
 }
+
+/*Модальное окно добавления тегов в акт*/
+.overlay_add_tag_of_act{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	display: none;
+	/*прозрачность*/
+	 
+	top: 0;
+	left: 0;	
+}
+
+.popup_add_tag_of_act{
+	overflow-y: auto;
+	position: relative;
+	width: 450px;
+	height: 450px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #0288D1;
+	color: #fff;
+
+	display: flex;
+	align-items: top;
+	justify-content: center;
+
+}
+
+.popup_item_tag_span{
+	background: #03A9F4;
+	border-radius: 20px;
+	padding: 5px;
+	padding-left: 20px; 
+	padding-right: 20px; 
+	margin-top: 20px; 
+	display: flex;
+	align-items: center;
+}
+
+.popup_item_tag_checkbox{
+	margin-right: 10px;
+	cursor: pointer;
+	transform:scale(1.5);
+}
+
+.popup_item_tag_text{
+	background: #03A9F4;
+	border: none;
+	outline: none;
+	font-size: 20px;
+	color: white;
+	width: 100%;
+	text-overflow: ellipsis;
+}
+
+.popup_item_add_tag_of_act{
+	display: flex;
+	align-items: center;
+	display:inline-block;
+	margin: 20px;
+	font-size: 25px;
+}

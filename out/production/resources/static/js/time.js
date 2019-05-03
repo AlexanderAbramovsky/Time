@@ -286,7 +286,12 @@ $(document).ready(function(){
 
 		var timer_button_tag = $('<button>', {
 									class: 'timer_button timer_button_tag',
-									id: "timer_button_tag" + id
+									id: "timer_button_tag" + id,
+									on: {
+            							click: function(event){
+            								addTags(element);
+            							}
+            						}	
 								});
 
 		var timer_span_start_end = $('<span>', {
@@ -308,7 +313,7 @@ $(document).ready(function(){
             								click: function(event){
             									// запоминаем id и текст тега
             									idDeleteAct = id;
-                								$('#overlay_delete_act').fadeIn(); // открываем модальное окно обновления тега
+                								$('#overlay_delete_act').fadeIn();
             								}
             							}	
 									});
@@ -370,6 +375,51 @@ $(document).ready(function(){
 		});
 	}
 
+	function addTags(act){
+
+		$("#popup_item_tag").empty();
+		//$(".popup_item_add_tag_of_act").append("<h2>Выберите теги:</h2>");			
+		// делаем запрос на получение всех тегов из базы данных
+		$.ajax({
+			url: 'http://localhost:8080/all_tags',
+			type: 'POST',
+			dataType: 'json',
+			async: false,
+			success: function(data){
+
+				// проходим по всему списку data
+				$.each(data, function(index, element) {
+
+					var span_tag = $('<span>', {
+										class: 'popup_item_tag_span',
+									});
+
+					var checkbox_tag = $('<input>', {
+										type: 'checkbox',
+										class: 'popup_item_tag_checkbox',
+									});
+
+					var text_tag = $('<input>', {
+										type: 'text',
+										class: 'popup_item_tag_text',
+										value: element.tag
+									});
+
+					span_tag.append(checkbox_tag);
+					span_tag.append(text_tag);
+					span_tag.append('<br>');	
+					$("#popup_item_tag").append(span_tag);
+   				 });
+         		
+      		},
+      		error: function(error){
+         		alert(error);
+      		}
+		});
+
+		$('.overlay_add_tag_of_act').fadeIn();
+	}
+
 	//__________Модальные_окна___________________
 
 	//закрытие модального окна удаления записи
@@ -397,4 +447,16 @@ $(document).ready(function(){
 		$('.overlay').fadeOut();
 	});
 
+	//закрытие модального окна
+	$('.close_popup').on('click',  function(event){
+		$('.overlay_add_tag_of_act').fadeOut();
+	});
+
+	//закрываем окно добавления тегов если происходит нажатие вне окна
+	$(document).mouseup(function(event) {
+		var popup = $('.popup_add_tag_of_act');
+		if(event.target != popup[0] && popup.has(event.target).length === 0){
+			$('.overlay_add_tag_of_act').fadeOut();
+		}
+	});
 });
