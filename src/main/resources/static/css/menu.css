@@ -550,14 +550,35 @@ body{
 /*____________________Настройка_Блока_Отчётов_______________________________________*/
 
 /*Блок Диаграмы*/
+.div_reports_content{
+	display: flex;
+	align-items: top;
+}
+
+.diagram_content{
+	width: 850px;
+}
+
+.report_content_tag{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: calc(100vh - 5px);
+	margin: 20px; 
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
 .diagram{
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	width: 800px;
-	height: 350px;
+	height:  350px;
+	margin: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	display:inline-block;
+
 }
 
 .controller_div_weeks{
@@ -581,3 +602,32 @@ body{
 .controller_button_weeks:hover {
   color: #B3E5FC;
 }
+
+.diagram_label{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-weight: bold;	
+	font-size: 25px;
+	margin-top: 20px;
+	color: #1e90ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
