@@ -95,7 +95,7 @@ public class ActController {
     }
 
     @PostMapping(path="/get_act_findById")
-    public Optional<Act> getActsFindDateAct(@RequestParam Integer id) {
+    public Optional<Act> getActById(@RequestParam Integer id) {
         return service.getActById(id);
     }
 

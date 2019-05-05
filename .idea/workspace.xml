@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee4f3aef-60be-43ca-a58e-5b79a3b6b0c7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/controllers/ActController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/controllers/ActController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/js/reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/static/js/reports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/reports.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/time.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/time.html" afterDir="false" />
     </list>
@@ -84,26 +87,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1144">
-              <caret line="90" column="42" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="42" />
+            <state relative-caret-position="175">
+              <caret line="143" column="33" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
               <folding>
-                <element signature="docComment;field#service#0;class#ActController#0" />
-                <element signature="docComment;method#setTagService#0;class#ActController#0" />
-                <element signature="method#setTagService#0;class#ActController#0" />
-                <element signature="docComment;method#deleteAct#0;class#ActController#0" />
-                <element signature="method#deleteAct#0;class#ActController#0" />
-                <element signature="docComment;method#getAllTimeDate#0;class#ActController#0" />
-                <element signature="method#getAllTimeDate#0;class#ActController#0" />
-                <element signature="docComment;method#getActsDate#0;class#ActController#0" />
-                <element signature="method#getActsDate#0;class#ActController#0" />
-                <element signature="docComment;method#updateTag#0;class#ActController#0" />
-                <element signature="docComment;method#saveAct#0;class#ActController#0" />
-                <element signature="method#saveAct#0;class#ActController#0" />
-                <element signature="docComment;method#getAllActs#0;class#ActController#0" />
-                <element signature="method#getAllActs#0;class#ActController#0" />
+                <element signature="e#3316#3317#0" expanded="true" />
+                <element signature="e#3361#3362#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,7 +140,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logs/log.log">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-4477">
@@ -646,8 +637,8 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/eltex/Time/entity/Act.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/eltex/Time/repository/ActRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java" />
       </list>
     </option>
   </component>
@@ -662,9 +653,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -716,6 +704,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -802,7 +793,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18255034" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18255034" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -811,7 +802,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5673759" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42411348" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1076,6 +1067,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;class#TagController#0" />
+            <element signature="docComment;field#service#0;class#TagController#0" />
+            <element signature="docComment;method#setTagService#0;class#TagController#0" />
+            <element signature="method#setTagService#0;class#TagController#0" />
+            <element signature="docComment;method#getTag#0;class#TagController#0" />
+            <element signature="method#getTag#0;class#TagController#0" />
+            <element signature="docComment;method#saveTag#0;class#TagController#0" />
+            <element signature="method#saveTag#0;class#TagController#0" />
+            <element signature="docComment;method#updateTag#0;class#TagController#0" />
+            <element signature="method#updateTag#0;class#TagController#0" />
+            <element signature="docComment;method#deleteTag#0;class#TagController#0" />
+            <element signature="method#deleteTag#0;class#TagController#0" />
+            <element signature="docComment;method#getAllTags#0;class#TagController#0" />
+            <element signature="method#getAllTags#0;class#TagController#0" />
+            <element signature="docComment;method#getTags#0;class#TagController#0" />
+            <element signature="method#getTags#0;class#TagController#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1083,29 +1092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="90" column="42" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="42" />
-          <folding>
-            <element signature="docComment;field#service#0;class#ActController#0" />
-            <element signature="docComment;method#setTagService#0;class#ActController#0" />
-            <element signature="method#setTagService#0;class#ActController#0" />
-            <element signature="docComment;method#deleteAct#0;class#ActController#0" />
-            <element signature="method#deleteAct#0;class#ActController#0" />
-            <element signature="docComment;method#getAllTimeDate#0;class#ActController#0" />
-            <element signature="method#getAllTimeDate#0;class#ActController#0" />
-            <element signature="docComment;method#getActsDate#0;class#ActController#0" />
-            <element signature="method#getActsDate#0;class#ActController#0" />
-            <element signature="docComment;method#updateTag#0;class#ActController#0" />
-            <element signature="docComment;method#saveAct#0;class#ActController#0" />
-            <element signature="method#saveAct#0;class#ActController#0" />
-            <element signature="docComment;method#getAllActs#0;class#ActController#0" />
-            <element signature="method#getAllActs#0;class#ActController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1149,6 +1135,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4477">
           <caret line="4682" column="106" selection-start-line="4682" selection-start-column="106" selection-end-line="4682" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="143" column="33" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
+          <folding>
+            <element signature="e#3316#3317#0" expanded="true" />
+            <element signature="e#3361#3362#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
