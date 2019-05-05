@@ -156,12 +156,6 @@ body{
 	background-size: 30px 30px;
 }
 
-.timer_button_project{
-	background: url("../img/project.png") no-repeat;
-	background-size: 30px 30px;
-	background-position:center;
-}
-
 .timer_span_start_end{
 	margin-left: 50px;
 	padding: 5px;
@@ -556,7 +550,7 @@ body{
 }
 
 .diagram_content{
-	width: 850px;
+	width: 97%;
 }
 
 .report_content_tag{
@@ -571,7 +565,7 @@ body{
 
 .diagram{
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
-	width: 800px;
+	width: 100%;
 	height:  350px;
 	margin: 20px;
 	display: flex;

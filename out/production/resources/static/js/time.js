@@ -282,10 +282,6 @@ $(document).ready(function(){
             					}	
 							});
 								
-		var timer_button_project = $('<button>', {
-										class: 'timer_button timer_button_project',
-										id: "timer_button_project" + id
-									});
 
 		var timer_button_tag = $('<button>', {
 									class: 'timer_button timer_button_tag',
@@ -330,7 +326,6 @@ $(document).ready(function(){
 									});
 
 		div_act.append(div_act_text);
-		div_act.append(timer_button_project);
 		div_act.append(timer_button_tag);
 		div_act.append(timer_span_start_end);
 		div_act.append(timer_span_all);
