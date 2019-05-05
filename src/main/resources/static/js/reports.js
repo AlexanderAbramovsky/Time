@@ -14,8 +14,8 @@
         var days = [];
         var allTimeDays = [];
         var allTimeDaysInt = [];
-        var week = new Date(date);
 
+        var week = new Date(date);
         var countWeek = week.getDay();
         week.setDate(week.getDate() - countWeek + 1);
 
@@ -35,7 +35,6 @@
 
                     var str = time.split(":");
                     allTimeDaysInt[i] = Number(str[0]) + Number(str[1]) * 0.01 + Number(str[2]) * 0.0001;
-                   
                 },
                 error: function(error){
                     alert(error);
@@ -48,13 +47,13 @@
 
         var data = google.visualization.arrayToDataTable ([ 
             ['Element', 'Время', { role: 'annotation' } ], 
-            ['Пн\n' + days[0] ,allTimeDaysInt[0] + 0.00001, '' + allTimeDays[0] ], // Значение RGB 
-            ['Вт\n' + days[1] ,allTimeDaysInt[1] + 0.00001, '' + allTimeDays[1] ], // английское имя цвета 
-            ['Ср\n' + days[2] ,allTimeDaysInt[2] + 0.00001, '' + allTimeDays[2] ], 
-            ['Чт\n' + days[3] ,allTimeDaysInt[3] + 0.00001, '' + allTimeDays[3] ],
-            ['Пт\n' + days[4] ,allTimeDaysInt[4] + 0.00001, '' + allTimeDays[4] ],
-            ['Сб\n' + days[5] ,allTimeDaysInt[5] + 0.00001, '' + allTimeDays[5] ],
-            ['Вс\n' + days[6] ,allTimeDaysInt[6] + 0.00001, '' + allTimeDays[6] ], // объявление в стиле CSS 
+            ['Пн\n' + days[0] ,+allTimeDaysInt[0], '' + allTimeDays[0] ], // Значение RGB 
+            ['Вт\n' + days[1] ,+allTimeDaysInt[1], '' + allTimeDays[1] ], // английское имя цвета 
+            ['Ср\n' + days[2] ,+allTimeDaysInt[2], '' + allTimeDays[2] ], 
+            ['Чт\n' + days[3] ,+allTimeDaysInt[3], '' + allTimeDays[3] ],
+            ['Пт\n' + days[4] ,+allTimeDaysInt[4], '' + allTimeDays[4] ],
+            ['Сб\n' + days[5] ,+allTimeDaysInt[5], '' + allTimeDays[5] ],
+            ['Вс\n' + days[6] ,+allTimeDaysInt[6], '' + allTimeDays[6] ], // объявление в стиле CSS 
         ]);
 
         var options = {
@@ -67,23 +66,99 @@
 
     function drawCircleChart() {
 
-        
-        
-        var data = google.visualization.arrayToDataTable([
-            ['Газ', 'Проекты'],
-            ['No project', 165.09],
-            ['VR', 30.93],
-            ['Таймер', 45.03]
+        var tagsMap = new Map();
+
+        tagsMap.set("No tags", 0);
+
+        $.ajax({
+            url: 'http://localhost:8080/all_tags',
+            type: 'POST',
+            dataType: 'json',
+            async: false,
+            success: function(data){
+                $.each(data, function(index, element) {
+                    tagsMap.set(element.tag, 0);
+                });
+            },
+            error: function(error){
+                alert(error);
+            }
+        });
+
+        var week = new Date(date);
+        var countWeek = week.getDay();
+        week.setDate(week.getDate() - countWeek + 1);
+
+        for (var i = 0; i <= 6; i++) {
+            var jsonDate = week.getFullYear() + "-" + (week.getMonth()+1) + "-" + week.getDate();
+
+            $.ajax({
+                url: 'http://localhost:8080/get_acts_findDateAct',
+                type: 'POST',
+                dataType: 'json',
+                data: {date_act: jsonDate},
+                async: false,
+                success: function(acts){   
+                    $.each(acts, function(index, act) {
+                        var strTag = act.tag.split("-;-");
+
+                        var str = act.all_time_act.split(":");
+                        var allTimeAct = Number(str[0]) + Number(str[1]) * 0.01 + Number(str[2]) * 0.0001;
+
+                        if(strTag[0] == ""){
+                            tagsMap.set("No tags", tagsMap.get("No tags") + allTimeAct);
+                        } else {
+                            $.each(strTag, function(index, str) {
+                                tagsMap.set(str, tagsMap.get(str) + allTimeAct);
+                            });
+                        }
+                    });
+                },
+                error: function(error){
+                    alert(error);
+                }
+            });
+
+            week.setDate(week.getDate() + 1);
+        }
+
+        var dataCircle = google.visualization.arrayToDataTable([
+            ['Tag', 'Time'],
+            ['Test', 0]
         ]);
+
+        var timeNoTags = tagsMap.get("No tags");
+        if(timeNoTags != 0){
+            dataCircle.addRow(["No tags", timeNoTags]);
+        }
+
+
+        $.ajax({
+            url: 'http://localhost:8080/all_tags',
+            type: 'POST',
+            dataType: 'json',
+            async: false,
+            success: function(data){
+                $.each(data, function(index, element) {
+                    var time = tagsMap.get(element.tag);
+                    if(time != 0){
+                        dataCircle.addRow([""+element.tag, time]);
+                    }
+                });
+            },
+            error: function(error){
+                alert(error);
+            }
+        });
 
         var options = {
             slices: {
-                0: { color: 'silver' },
+                1: { color: 'silver' },
             },      
             pieHole: 0.4,
         };
         var chart = new google.visualization.PieChart(document.getElementById('job'));
-        chart.draw(data, options);
+        chart.draw(dataCircle, options);
     }
 
     $('#last_week').on('click', function(event) {       

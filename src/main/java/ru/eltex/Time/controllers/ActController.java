@@ -141,7 +141,7 @@ public class ActController {
      * @return - возвращает все акты по заданной дате
      */
     @PostMapping(path="/get_acts_findDateAct")
-    public Iterable<Act> getActsFindDateAct(@RequestParam String date_act) {
+        public Iterable<Act> getActsFindDateAct(@RequestParam String date_act) {
         LOGGER.info("Возвращает объекты Act по запрашиваемой дате создания акта из таблицы acts date-" + date_act);
         return service.getActByDate(date_act);
     }

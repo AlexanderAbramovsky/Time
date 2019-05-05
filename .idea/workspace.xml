@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee4f3aef-60be-43ca-a58e-5b79a3b6b0c7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/controllers/ActController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/controllers/ActController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/js/reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/static/js/reports.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/reports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/time.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/time.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -67,7 +63,7 @@
           <entry key="dummy" value="4" />
           <entry key="gradle" value="118" />
           <entry key="html" value="5" />
-          <entry key="java" value="12075" />
+          <entry key="java" value="12076" />
           <entry key="js" value="29" />
           <entry key="log" value="1" />
           <entry key="properties" value="120" />
@@ -77,7 +73,7 @@
         <counts>
           <entry key="Groovy" value="118" />
           <entry key="HTML" value="5" />
-          <entry key="JAVA" value="12075" />
+          <entry key="JAVA" value="12076" />
           <entry key="JavaScript" value="29" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="Properties" value="120" />
@@ -90,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="143" column="33" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
+            <state relative-caret-position="193">
+              <caret line="141" column="7" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
               <folding>
                 <element signature="e#3316#3317#0" expanded="true" />
                 <element signature="e#3361#3362#0" expanded="true" />
@@ -103,7 +99,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="129">
               <caret line="15" column="24" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -115,7 +111,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="-250">
               <caret line="103" selection-start-line="103" selection-end-line="103" />
               <folding>
                 <element signature="docComment;class#ActServiceImpl#0" />
@@ -140,15 +136,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logs/log.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4477">
-              <caret line="4682" column="106" selection-start-line="4682" selection-start-column="106" selection-end-line="4682" selection-end-column="106" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -158,6 +145,12 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>get</find>
+      <find>getActByD</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -802,7 +795,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42411348" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41276595" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1097,7 +1090,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="129">
           <caret line="15" column="24" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1105,9 +1098,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logs/log.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="7732" column="83" lean-forward="true" selection-start-line="7732" selection-start-column="83" selection-end-line="7732" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="-250">
           <caret line="103" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="docComment;class#ActServiceImpl#0" />
@@ -1131,17 +1131,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/log.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4477">
-          <caret line="4682" column="106" selection-start-line="4682" selection-start-column="106" selection-end-line="4682" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="143" column="33" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
+        <state relative-caret-position="193">
+          <caret line="141" column="7" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
           <folding>
             <element signature="e#3316#3317#0" expanded="true" />
             <element signature="e#3361#3362#0" expanded="true" />
