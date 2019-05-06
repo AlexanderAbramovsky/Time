@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee4f3aef-60be-43ca-a58e-5b79a3b6b0c7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/project.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/time.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/time.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -25,17 +24,17 @@
     <session id="892277013">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -45,7 +44,7 @@
           <entry key="ini" value="1" />
           <entry key="java" value="160" />
           <entry key="js" value="4" />
-          <entry key="log" value="8" />
+          <entry key="log" value="9" />
           <entry key="properties" value="7" />
         </counts>
       </usages-collector>
@@ -55,7 +54,7 @@
           <entry key="HTML" value="7" />
           <entry key="JAVA" value="160" />
           <entry key="JavaScript" value="4" />
-          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="PLAIN_TEXT" value="10" />
           <entry key="Properties" value="7" />
         </counts>
       </usages-collector>
@@ -64,7 +63,7 @@
           <entry key="dummy" value="4" />
           <entry key="gradle" value="118" />
           <entry key="html" value="5" />
-          <entry key="java" value="12076" />
+          <entry key="java" value="12485" />
           <entry key="js" value="29" />
           <entry key="log" value="1" />
           <entry key="properties" value="120" />
@@ -74,7 +73,7 @@
         <counts>
           <entry key="Groovy" value="118" />
           <entry key="HTML" value="5" />
-          <entry key="JAVA" value="12076" />
+          <entry key="JAVA" value="12485" />
           <entry key="JavaScript" value="29" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="Properties" value="120" />
@@ -87,24 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="141" column="7" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
-              <folding>
-                <element signature="e#3316#3317#0" expanded="true" />
-                <element signature="e#3361#3362#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="437">
+              <caret line="116" column="53" selection-start-line="116" selection-start-column="53" selection-end-line="116" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -112,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-250">
-              <caret line="103" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="239">
+              <caret line="91" column="50" lean-forward="true" selection-start-line="91" selection-start-column="50" selection-end-line="91" selection-end-column="50" />
               <folding>
                 <element signature="docComment;class#ActServiceImpl#0" />
                 <element signature="docComment;field#repository#0;class#ActServiceImpl#0" />
@@ -123,7 +106,6 @@
                 <element signature="docComment;method#updateAct#0;class#ActServiceImpl#0" />
                 <element signature="method#updateAct#0;class#ActServiceImpl#0" />
                 <element signature="method#deleteTagAct#0;class#ActServiceImpl#0" />
-                <element signature="method#addTagAct#0;class#ActServiceImpl#0" />
                 <element signature="method#deleteAllTagAct#0;class#ActServiceImpl#0" />
                 <element signature="docComment;method#getActByDate#0;class#ActServiceImpl#0" />
                 <element signature="docComment;method#getAllTimeDate#0;class#ActServiceImpl#0" />
@@ -132,6 +114,18 @@
                 <element signature="docComment;method#saveAct#0;class#ActServiceImpl#0" />
                 <element signature="method#saveAct#0;class#ActServiceImpl#0" />
                 <element signature="docComment;method#findAllAct#0;class#ActServiceImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -647,60 +641,25 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Server Timer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Time" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Time" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Server Timer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Time" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Time" type="462c0819:PsiDirectoryNode" />
               <item name="logs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server Timer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Time" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server Timer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Time" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server Timer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Time" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server Timer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Time" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Time" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server Timer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Time" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Time" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -787,7 +746,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18255034" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1852349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -796,7 +755,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41276595" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41276595" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -872,14 +831,6 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java</url>
-          <line>79</line>
-          <properties class="ru.eltex.Time.controllers.ActController" method="updateTag">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActServiceImpl.java</url>
           <line>65</line>
           <properties class="ru.eltex.Time.service.ActServiceImpl" method="deleteTagAct">
@@ -889,27 +840,11 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java</url>
-          <line>85</line>
-          <properties class="ru.eltex.Time.controllers.ActController" method="deleteTagAct">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java</url>
-          <line>97</line>
-          <properties class="ru.eltex.Time.controllers.ActController" method="getActsFindDateAct">
+          <line>115</line>
+          <properties class="ru.eltex.Time.controllers.ActController" method="getActById">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java</url>
-          <line>91</line>
-          <properties class="ru.eltex.Time.controllers.ActController" method="deleteTagAct">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActServiceImpl.java</url>
@@ -1089,9 +1024,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logs/log.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="11990" column="92" lean-forward="true" selection-start-line="11990" selection-start-column="92" selection-end-line="11990" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
+        <state relative-caret-position="261">
           <caret line="15" column="24" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1099,17 +1041,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/log.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="7732" column="83" lean-forward="true" selection-start-line="7732" selection-start-column="83" selection-end-line="7732" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/service/ActServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="239">
+          <caret line="91" column="50" lean-forward="true" selection-start-line="91" selection-start-column="50" selection-end-line="91" selection-end-column="50" />
           <folding>
             <element signature="docComment;class#ActServiceImpl#0" />
             <element signature="docComment;field#repository#0;class#ActServiceImpl#0" />
@@ -1119,7 +1054,6 @@
             <element signature="docComment;method#updateAct#0;class#ActServiceImpl#0" />
             <element signature="method#updateAct#0;class#ActServiceImpl#0" />
             <element signature="method#deleteTagAct#0;class#ActServiceImpl#0" />
-            <element signature="method#addTagAct#0;class#ActServiceImpl#0" />
             <element signature="method#deleteAllTagAct#0;class#ActServiceImpl#0" />
             <element signature="docComment;method#getActByDate#0;class#ActServiceImpl#0" />
             <element signature="docComment;method#getAllTimeDate#0;class#ActServiceImpl#0" />
@@ -1134,12 +1068,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="141" column="7" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
-          <folding>
-            <element signature="e#3316#3317#0" expanded="true" />
-            <element signature="e#3361#3362#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="437">
+          <caret line="116" column="53" selection-start-line="116" selection-start-column="53" selection-end-line="116" selection-end-column="53" />
         </state>
       </provider>
     </entry>

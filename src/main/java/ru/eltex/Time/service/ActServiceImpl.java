@@ -62,6 +62,11 @@ public class ActServiceImpl implements ActService{
         repository.save(updated.get());
     }
 
+    /**
+     * Удаляет тег из акта
+     * @param id - id акта
+     * @param tag - удаляемый тег
+     */
     @Override
     public void deleteTagAct(Integer id, String tag) {
         Optional<Act> updated = repository.findById(id);
@@ -88,6 +93,11 @@ public class ActServiceImpl implements ActService{
 
     }
 
+    /**
+     * Добавляет тег в акт
+     * @param id - id акта
+     * @param tag - добавляемый тег
+     */
     @Override
     public void addTagAct(Integer id, String tag) {
         Optional<Act> updated = repository.findById(id);
@@ -100,6 +110,10 @@ public class ActServiceImpl implements ActService{
         repository.save(updated.get());
     }
 
+    /**
+     * Удаляет тег из всех актов
+     * @param tag - удаляемый тег
+     */
     @Override
     public void deleteAllTagAct(String tag) {
         Iterable<Act> acts = findAllAct();

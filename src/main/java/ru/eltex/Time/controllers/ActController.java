@@ -75,27 +75,46 @@ public class ActController {
         service.updateAct(id, act);
     }
 
-
+    /**
+     * Добавляет тег в акт
+     * @param id - id акта
+     * @param tag - добавляемый тег
+     */
     @PostMapping(path="/add_tag_act")
     public void addTagAct(@RequestParam Integer id, @RequestParam String tag) {
-        //LOGGER.info("Обновляет запрашиваемый объект Act из таблицы tags id-" + id);
+        LOGGER.info("Добавляет тег-" + tag + " в акт id-" + id);
         service.addTagAct(id, tag);
     }
 
+    /**
+     * Удаляет тег из акта
+     * @param id - id акта
+     * @param tag - удаляемый тег
+     */
     @PostMapping(path="/delete_tag_act")
     public void deleteTagAct(@RequestParam Integer id, @RequestParam String tag) {
-        //LOGGER.info("Обновляет запрашиваемый объект Act из таблицы tags id-" + id);
+        LOGGER.info("Удаляет тег-" + tag + " из акта id-" + id);
         service.deleteTagAct(id, tag);
     }
 
+    /**
+     * Удаляет тег из всех актов
+     * @param tag - удаляемый тег
+     */
     @PostMapping(path="/delete_tag_all_act")
     public void deleteAllTagAct(@RequestParam String tag) {
-        //LOGGER.info("Обновляет запрашиваемый объект Act из таблицы tags id-" + id);
+        LOGGER.info("Удаляет из всех актов тег - " + tag);
         service.deleteAllTagAct(tag);
     }
 
+    /**
+     * Возвращает акт по его id
+     * @param id - id акта
+     * @return - акт
+     */
     @PostMapping(path="/get_act_findById")
     public Optional<Act> getActById(@RequestParam Integer id) {
+        LOGGER.info("Возвращает акт по его id-" + id);
         return service.getActById(id);
     }
 
