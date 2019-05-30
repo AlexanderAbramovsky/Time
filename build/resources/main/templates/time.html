@@ -2,65 +2,95 @@
 
 <meta charset="utf-8">
 
-<html>
 <head>
     <title>Time</title>
-
     <link rel="stylesheet" type="text/css" href="/css/menu.css"/>
+    <script src="https://www.google.com/jsapi"></script>
 </head>
+
 <body>
 
     <div id="wrapper">
-        <div id="menu" class="menu">
-            
-            <ul class="ul_menu">
-                <li class="li_mune"><button class="button_menu" id="timer">Таймер</button></li>
-                <li class="li_mune"><button class="button_menu" id="reports">Отчёты</button></li>
-                <li class="li_mune"><button class="button_menu" id="projects">Проекты</button></li>
-                <li class="li_mune"><button class="button_menu" id="tags">Теги</button></li>
-            </ul>
-            
+        <div id="menu" class="menu"> 
+            <div class="div_menu">
+                <div class="menu_item">
+                    <label>Меню:</label>
+                    <button class="button_menu" id="timer_menu">Таймер</button>
+                    <button class="button_menu" id="reports_menu">Отчёты</button>
+                    <button class="button_menu" id="tags_menu">Теги</button>
+                </div> 
+    
+                <div class="exit">
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" value="Выйти" class="button_menu"/>
+                    </form>
+                </div>
+            </div>
         </div>
     
         <div id="content">
             <div id="timer_content">
-                <input type="text" id="text_time" size="10">
-                <label id="label_time" > 00:00:00 </label>
-                <button id="start_timer" class="start_timer">start</button>
-                <br><br><br>
+                <div class="timer">
+                    <input type="text" name="" id="timer_text" 
+                        placeholder="Над чем ты работаешь ?">   
+                    <span id="timer_span">00:00:00</span>
+                    <button class="timer_button_controller"
+                        id="timer_button_controller"></button>
+                    <button id="timer_button_bucket"></button>         
+                </div>
+                
+                <div id="content_div_all_acts"></div>
 
-                <label id="label_fio" >fio</label>
-                <input type="text" id="text_fio" size="10">
-                
-                <label id="label_number" >number</label>
-                <input type="text" id="text_number" size="10">
-                
-                <button id="add" class="start_timer">Добавить</button> <br> <br> <br>
-                <button id="all" class="start_timer">Вывести всё</button>
+                <!-- модальное окно удаление акта -->
+                <div class="overlay" id="overlay_delete_act">
+                    <div class="popup_delete" id="popup_delete" style="width: 560px; height: 300px">
+                        <div class="popup_item">
+                            <h2>Вы уверены, что хотите удалить эту запись?</h2>
+                            <button id="button_delete_act" class ="button_popup">Удалить</button>
+                            <button id="button_delete_act_cancel" style="margin-left: 30px" class ="button_popup">Отмена</button>
+                            <div class="close_popup" id="close_popup_delete_act"></div>
+                        </div>
+                    </div>
+                </div>
 
-                <br>
-                
+                <!-- модальное окно выбора тегов -->
+                <div class="overlay_add_tag_of_act">
+                    <div class="popup_add_tag_of_act" id="popup_add_tag_of_act1">
+                        <div class="popup_item_add_tag_of_act">
+                            <h2>Выберите теги:</h2>
+                            <div id="popup_item_tag">
+                                <span class="popup_item_tag_span">
+                                    <input type="checkbox" class="popup_item_tag_checkbox">
+                                    <input type="text" class="popup_item_tag_text" value="очнь большой текст внутри" readonly>
+                                    <br>
+                                </span>  
+                            </div>     
+                            <div class="close_popup" id="close_popup_add_tag_of_act"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div id="reports_content">ОТЧЁТЫ</div>
-    
-            <div id="projects_content">ПРОЕКТЫ</div>
+            <div id="reports_content">
+                <div class="div_reports_content">
+                        <div class="diagram_content">
+                        <div class="diagram">
+                          <div id="weeks" style="width: 100%; height: 300px"></div>
+                          <div class="controller_div_weeks">
+                              <button class="controller_button_weeks" id="last_week">Предыдущая</button>  
+                              <button class="controller_button_weeks" id="this_week">Текущая</button>
+                              <button class="controller_button_weeks" id="next_week">Следующая</button>
+                          </div>  
+                        </div>
+                
+                        <div class="diagram" style="margin-top: 30px;">
+                            <label class="diagram_label">Теги:</label>
+                            <div id="job" style="width: 100%; height: 300px"></div>
+                        </div>
+                        </div>
+                </div> 
+            </div>
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- блок Тегов -->
             <div id="tags_content">
 
                 <div class="div_add_tag">
@@ -72,43 +102,7 @@
                     </div>
                 </div>
                 
-
-                
-                <div id="all_tags" class="div_all_tags">
-
-                    <span class="span">
-                        <span class="span_item">
-                            Тут текст
-                            <button class="button_update"></button>
-                            <button class="button_delete"></button>
-                        </span>
-                    </span>
-
-                     <span class="span">
-                        <span class="span_item">
-                            Тут текст
-                            <button class="button_update"></button>
-                            <button class="button_delete"></button>
-                        </span>
-                    </span>
-
-                     <span class="span">
-                        <span class="span_item">
-                            Тут текст
-                            <button class="button_update"></button>
-                            <button class="button_delete"></button>
-                        </span>
-                    </span>
-
-                     <span class="span">
-                        <span class="span_item">
-                            Тут текст
-                            <button class="button_update"></button>
-                            <button class="button_delete"></button>
-                        </span>
-                    </span>
-
-                </div>
+                <div id="all_tags" class="div_all_tags"></div>
 
                 <a href="#delete_Form_Tag"></a>
 
@@ -140,29 +134,15 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
-
-       
     </div>
 
-    <script type="text/javascript" src="js/jquery-3.4.0.min.js/"></script> 
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js/"></script>
     <script type="text/javascript" src="js/time.js/"></script> 
+    <script type="text/javascript" src="js/reports.js/"></script> 
     <script type="text/javascript" src="js/tags.js/"></script>
+    <script type="text/javascript" src="js/menu.js/"></script>
+
 </body>
 </html>

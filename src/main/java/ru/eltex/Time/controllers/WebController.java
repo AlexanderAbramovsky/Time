@@ -2,9 +2,10 @@ package ru.eltex.Time.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 
-/** Контроллер возвращающий страницы
+/** Контроллер возвращающий страницу html
  * @author Абрамовский Александр sahan.abr@yandex.ru
  * @version 1.0.0
  */

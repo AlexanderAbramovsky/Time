@@ -2,10 +2,7 @@ package ru.eltex.Time.controllers;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ru.eltex.Time.entity.Act;
 import ru.eltex.Time.service.ActService;
 
@@ -37,6 +34,7 @@ public class ActController {
      * Удаляет запрашиваемый объект Act из базы данных
      * @param id - id запрашиваемого объекта
      */
+    @CrossOrigin
     @PostMapping(path="/delete_act")
     public void deleteAct(@RequestParam int id) {
         LOGGER.info("Удаляет объект Act из таблицы acts id-" + id);
@@ -48,6 +46,7 @@ public class ActController {
      * @param date_act - дата
      * @return - общее время выполнее актов
      */
+    @CrossOrigin
     @PostMapping(path="/get_all_time_date")
     public String getAllTimeDate(String date_act) {
         LOGGER.info("общее время всех актов даты-" + date_act);
@@ -58,6 +57,7 @@ public class ActController {
      * Возвращает все уникальные даты создания актов из таблицы acts
      * @return - возвращает даты
      */
+    @CrossOrigin
     @PostMapping(path="/get_distinct_date")
     public Iterable<String> getActsDate() {
         LOGGER.info("Возвращает все уникальные даты создания актов из таблицы acts");

@@ -1,8 +1,6 @@
 package ru.eltex.Time.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
-import java.sql.Time;
 
 /** Сущность для работы с таблицей acts базы данных mysql
  * @author Абрамовский Александр sahan.abr@yandex.ru

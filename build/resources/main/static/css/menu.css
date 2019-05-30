@@ -4,9 +4,186 @@ body{
 	color: black;
 }
 
+/*__________________________Блок таймера______________________________*/
+.timer{
+	background: white;
+	width: calc(80% - 20px);
+	height: 60px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+    display: flex;
+	justify-content: left;
+	align-items: center;
+	position: fixed;
+}
+
+#timer_text{
+	width: calc(100% - 330px);
+	height: calc(100% - 10px);
+	border: none;
+	outline: none;
+	padding-left: 30px;
+	display:inline-block;
+	text-overflow: ellipsis;
+	font-size: 30px;
+	color: #0288D1;
+}
+
+.timer_button_controller{
+	margin-left: 30px; 
+	outline: none;
+  	height: 55px;
+  	width: 55px;
+  	border: none;
+  	cursor: pointer;
+  	border-radius: 50%;
+  	background: url("../img/start.png") no-repeat;
+	background-size: 55px 55px;
+}
+
+#timer_button_bucket{
+	margin-left: 20px;
+	display: none; 
+	outline: none;
+  	height: 30px;
+  	width: 30px;
+  	border: none;
+  	cursor: pointer;
+  	background: url("../img/bucket.png") no-repeat;
+	background-size: 30px 30px;
+}
+
+#timer_span{
+	color: white;
+	margin-left: 30px;
+	border-radius: 30px; 
+	padding: 10px;
+	font-size: 30px;
+	background: #03A9F4;
+}
+
+/*Блок_Дня*/
+
+#content_div_all_acts{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	display:inline-block;
+	margin-top: 50px;
+}
+
+.div_day_act{
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display:inline-block;
+	width: 100%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+	background: #B3E5FC;
+}
+
+.day_inform{ 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	font-size: 30px;
+	font-weight: bold;
+	color: #0288D1;
+}
+
+.right_day_inform{	
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
 
 
-/*блок контента*/
+.button_delete_day{
+	margin-left: 20px;
+	margin-right: 20px;
+	outline: none;
+  	height: 35px;
+  	width: 35px;
+  	border: none;
+  	cursor: pointer;
+  	background: url("../img/delete_day.png") no-repeat;
+	background-size: 35px 35px;
+}
+
+.labal_day_inform{
+	margin-left: 20px; 
+}
+
+/*Блок_Акта*/
+.div_act{
+	padding: 6px;
+	background: white;
+	border-top: 1px solid;
+	border-color: #03A9F4;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.div_act_text{
+	width: calc(100% - 650px);
+	border: none;
+	outline: none;
+	padding-left: 30px;
+	text-overflow: ellipsis;
+	font-size: 20px;
+	color: #0288D1;
+}
+
+.timer_button{
+	margin-left: 30px; 
+	outline: none;
+  	height: 40px;
+  	width: 40px;
+  	border: none;
+  	cursor: pointer;
+}
+
+.timer_button_tag{
+	background: url("../img/tag.png") no-repeat;
+	border: 3px solid;
+	border-color: white;	
+	border-radius: 5px;
+	background-position:center;
+	background-size: 30px 30px;
+}
+
+.timer_span_start_end{
+	margin-left: 50px;
+	padding: 5px;
+	font-size: 20px;
+	color: #BDC3C7;
+}
+
+.timer_span_all{
+	margin-left: 20px;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px; 
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 10px;
+	background: #ECF0F1;
+	color: #0288D1;
+}
+
+.timer_button_delete{	
+	margin-right: 20px;
+	height: 25px;
+  	width: 25px;
+	background: url("../img/delete_day.png") no-repeat;
+	background-size: 25px 25px;
+}
+
+/*_______________________блок контента_______________________________*/
 #content{
 	position: absolute;
 	width: calc(80% - 20px); 
@@ -30,21 +207,33 @@ body{
 	height:100vh; 
 	float: left;
 	position: fixed;
-
-
 }
 
-.ul_menu{
-	
-
+.div_menu{
+	display: flex;
+	justify-content: center;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
 }
 
-
-.li_mune{
-	list-style-type: none;
-	margin-top: 20px;
+.menu_item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 350px;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
 }
 
+.exit{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	height: calc(100% - 370px);
+}
 
 .button_menu{
 	background-color: #03A9F4;
@@ -59,6 +248,7 @@ body{
 	border-radius: 5px;
 	transition: 0.2s;
 	cursor: pointer;
+	margin: 10px;
 }
 
 .button_menu:hover { 
@@ -69,7 +259,7 @@ body{
  background: white; 
 }
 
-/*____________блок_тегов__________________*/
+/*____________________блок_тегов_____________________________*/
 .div_add_tag{
 	display: flex;
 	justify-content: center;
@@ -82,13 +272,14 @@ body{
 }
 
 .text_add_tag{
-
 	color: #03A9F4;
 	height: 50px;
 	width: 300px;
 	border: none;
 	border-bottom: 2px solid;
 	outline: none;
+	display:inline-block;
+	text-overflow: ellipsis;
 	font-size: 30px;
 }
 
@@ -183,6 +374,7 @@ body{
 	height: 100vh;
 	top: 0;
 	left: 0;
+	position: fixed;
 	/*прозрачность*/
 	background-color: rgba(0,0,0,.8); 
 	display: none;
@@ -293,4 +485,233 @@ body{
 	outline: none;
 	font-size: 30px;
 	padding-left: 5px;
+	display:inline-block;
+	text-overflow: ellipsis;
 }
+
+/*Модальное окно добавления тегов в акт*/
+.overlay_add_tag_of_act{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	display: none;
+	/*прозрачность*/
+	 
+	top: 0;
+	left: 0;	
+}
+
+.popup_add_tag_of_act{
+	overflow-y: auto;
+	position: relative;
+	width: 450px;
+	height: 450px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #0288D1;
+	color: #fff;
+
+	display: flex;
+	align-items: top;
+	justify-content: center;
+
+}
+
+.popup_item_tag_span{
+	background: #03A9F4;
+	border-radius: 20px;
+	padding: 5px;
+	padding-left: 20px; 
+	padding-right: 20px; 
+	margin-top: 20px; 
+	display: flex;
+	align-items: center;
+}
+
+.popup_item_tag_checkbox{
+	margin-right: 10px;
+	cursor: pointer;
+	transform:scale(1.5);
+}
+
+.popup_item_tag_text{
+	background: #03A9F4;
+	border: none;
+	outline: none;
+	font-size: 20px;
+	color: white;
+	width: 100%;
+	text-overflow: ellipsis;
+}
+
+.popup_item_add_tag_of_act{
+	display: flex;
+	align-items: center;
+	display:inline-block;
+	margin: 20px;
+	font-size: 25px;
+}
+
+/*____________________Настройка_Блока_Отчётов_______________________________________*/
+
+/*Блок Диаграмы*/
+.div_reports_content{
+	display: flex;
+	align-items: top;
+}
+
+.diagram_content{
+	width: 97%;
+}
+
+.report_content_tag{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: calc(100vh - 5px);
+	margin: 20px; 
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.diagram{
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	width: 100%;
+	height:  350px;
+	margin: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display:inline-block;
+
+}
+
+.controller_div_weeks{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.controller_button_weeks{
+	background-color: white;
+	color: #1e90ff;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.controller_button_weeks:hover {
+  color: #B3E5FC;
+}
+
+.diagram_label{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-weight: bold;	
+	font-size: 25px;
+	margin-top: 20px;
+	color: #1e90ff;
+}
+
+/*___________________Настройка_Блока_Авторизации_и_Регистрация______________________________*/
+
+.main_div{
+	width: 100%;
+	height: 100vh;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+.div_authorization{
+	width: 400px;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;	
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	background: #03A9F4;
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+form{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.button_authorization{
+	background-color: #03A9F4;
+	color: white;
+	padding: 10px;
+	width: 300px;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	outline: none;
+	border: 2px solid;
+	border-radius: 5px;
+	transition: 0.2s;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.button_authorization:hover { 
+	background: #B3E5FC; 
+}
+
+.button_authorization:active {
+ 	background: white; 
+}
+
+.text_authorization{
+	width: 300px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: none;
+	outline: none;
+	padding-left: 10px;
+	text-overflow: ellipsis;
+	font-size: 25px;
+	color: #0288D1;
+}
+
+.label_authorization{
+	color: #B22222;
+	font-size: 20px;
+	text-decoration: underline;
+	font-style: italic;
+	margin-bottom: 10px;
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

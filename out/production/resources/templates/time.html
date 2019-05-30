@@ -2,21 +2,30 @@
 
 <meta charset="utf-8">
 
-<html>
 <head>
     <title>Time</title>
     <link rel="stylesheet" type="text/css" href="/css/menu.css"/>
     <script src="https://www.google.com/jsapi"></script>
 </head>
+
 <body>
 
     <div id="wrapper">
-        <div id="menu" class="menu">       
-            <ul class="ul_menu">
-                <li class="li_mune"><button class="button_menu" id="timer_menu">Таймер</button></li>
-                <li class="li_mune"><button class="button_menu" id="reports_menu">Отчёты</button></li>
-                <li class="li_mune"><button class="button_menu" id="tags_menu">Теги</button></li>
-            </ul>
+        <div id="menu" class="menu"> 
+            <div class="div_menu">
+                <div class="menu_item">
+                    <label>Меню:</label>
+                    <button class="button_menu" id="timer_menu">Таймер</button>
+                    <button class="button_menu" id="reports_menu">Отчёты</button>
+                    <button class="button_menu" id="tags_menu">Теги</button>
+                </div> 
+    
+                <div class="exit">
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" value="Выйти" class="button_menu"/>
+                    </form>
+                </div>
+            </div>
         </div>
     
         <div id="content">
@@ -82,7 +91,6 @@
                 </div> 
             </div>
             
-            <!-- блок Тегов -->
             <div id="tags_content">
 
                 <div class="div_add_tag">
@@ -130,7 +138,7 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="js/jquery-3.4.0.min.js/"></script> 
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js/"></script>
     <script type="text/javascript" src="js/time.js/"></script> 
     <script type="text/javascript" src="js/reports.js/"></script> 
     <script type="text/javascript" src="js/tags.js/"></script>
