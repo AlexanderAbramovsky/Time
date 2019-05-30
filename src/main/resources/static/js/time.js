@@ -466,7 +466,7 @@ $(document).ready(function(){
    				 });
       		},
       		error: function(error){
-         		alert(error);
+         		alert("Что-то пошло не так.");
       		}
 		});
 	}
