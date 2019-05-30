@@ -31,7 +31,7 @@ $(document).ready(function(){
 			
 			// Проверяем есть ли такой тег, если нет то сохраняем его
 			$.ajax({
-				url: '/get_tag_findTextTag',
+				url: 'http://91.196.245.199:8092/get_tag_findTextTag',
 				type: 'POST',
 				
 				dataType: 'json',
@@ -41,7 +41,7 @@ $(document).ready(function(){
 						alert("Такой тег уже существует !");
 					} else {
 						$.ajax({
-							url: '/save_tag',
+							url: 'http://91.196.245.199:8092/save_tag',
 							type: 'POST',
 							dataType: 'json',
 							data: {tag: text},
@@ -74,7 +74,7 @@ $(document).ready(function(){
 
 		// Делаем ajax запрос на получение всех тегов из базы данных 
 		$.ajax({
-			url: '/all_tags',
+			url: 'http://91.196.245.199:8092/all_tags',
 			type: 'POST',
 			dataType: 'json',
 			success: function(data){
@@ -175,7 +175,7 @@ $(document).ready(function(){
 		} else {
 			// Проверяем есть ли в базе такой же тег, если нет то обновляем тег
 			$.ajax({
-				url: '/get_tag_findTextTag',
+				url: 'http://91.196.245.199:8092/get_tag_findTextTag',
 				type: 'POST',
 				dataType: 'json',
 				data: {tag: textUpdateTeg},
@@ -185,7 +185,7 @@ $(document).ready(function(){
 					} else {
 						// Обновляем текст тега
 						$.ajax({
-							url: '/update_tag',
+							url: 'http://91.196.245.199:8092/update_tag',
 							type: 'POST',
 							data: {id: idUpdateTeg, tag: textUpdateTeg},
 							success: function(){
@@ -213,14 +213,14 @@ $(document).ready(function(){
 
 		// Удалят тег из базы данных 
 		$.ajax({
-			url: '/delete_tag',
+			url: 'http://91.196.245.199:8092/delete_tag',
 			type: 'POST',
 			data: {id: idUpdateTeg} // 
 		});
 
 		// Удаляет тег из всех записей актов
 		$.ajax({
-			url: '/delete_tag_all_act',
+			url: 'http://91.196.245.199:8092/delete_tag_all_act',
 			type: 'POST',
 			data: {tag: textDeleteTeg}  
 		});

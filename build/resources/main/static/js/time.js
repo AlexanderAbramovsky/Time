@@ -177,7 +177,7 @@ $(document).ready(function(){
 		// и получаем их назад с присвоенным id 
 		// и добавляем акт в блок div (content_div_all_acts) 
 		$.ajax({
-			url: '/save_act',
+			url: 'http://91.196.245.199:8092/save_act',
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -211,7 +211,7 @@ $(document).ready(function(){
 
 							// Получаем общее время актов за текущий день
 							$.ajax({
-								url: '/get_all_time_date',
+								url: 'http://91.196.245.199:8092/get_all_time_date',
 								type: 'POST',
 								dataType: 'text',
 								data: {date_act: jsonData},
@@ -255,7 +255,7 @@ $(document).ready(function(){
 
 		// Делаем ajax запрос чтобы получить общее время всех актов за определенный день 
 		$.ajax({
-			url: '/get_all_time_date',
+			url: 'http://91.196.245.199:8092/get_all_time_date',
 			type: 'POST',
 			dataType: 'text',
 			data: {date_act: data},
@@ -345,7 +345,7 @@ $(document).ready(function(){
             							// Если в <text> ввели новое описание и сняли с него фокус
             							// он обновит текст акта в базе данных через ajax запрос 
             							$.ajax({
-											url: '/update_act',
+											url: 'http://91.196.245.199:8092/update_act',
 											type: 'POST',
 											data: {id: id, act: div_act_text.val()},
 										});	
@@ -413,7 +413,7 @@ $(document).ready(function(){
 
 		// делаем запрос на получение оригинальных дат актов из базы данных
 		$.ajax({
-			url: '/get_distinct_date',
+			url: 'http://91.196.245.199:8092/get_distinct_date',
 			type: 'POST',
 			dataType: 'json',
 			success: function(date){
@@ -429,7 +429,7 @@ $(document).ready(function(){
 					var div_day_act = getDivDayAct(id_day, jsonData);
 
 					$.ajax({
-						url: '/get_acts_findDateAct',
+						url: 'http://91.196.245.199:8092/get_acts_findDateAct',
 						type: 'POST',
 						dataType: 'json',
 						data: {date_act: jsonData},
@@ -456,14 +456,14 @@ $(document).ready(function(){
 		$("#popup_item_tag").empty();
 
 		$.ajax({
-			url: '/get_act_findById',
+			url: 'http://91.196.245.199:8092/get_act_findById',
 			type: 'POST',
 			dataType: 'json',
 			async: false,
 			data: {id: id},
 			success: function(act){
 						$.ajax({
-							url: '/all_tags',
+							url: 'http://91.196.245.199:8092/all_tags',
 							type: 'POST',
 							dataType: 'json',
 							async:false,
@@ -484,14 +484,14 @@ $(document).ready(function(){
             													//либо добавляем тег, либо его удаляем 
             													if(checkbox_tag.is(':checked')){
             														$.ajax({
-            															url: '/add_tag_act',
+            															url: 'http://91.196.245.199:8092/add_tag_act',
             															type: 'POST',
             															async:false,
             															data: {id: act.id, tag: text_tag.val()},
             														});
             													} else {
             														$.ajax({
-            															url: '/delete_tag_act',
+            															url: 'http://91.196.245.199:8092/delete_tag_act',
             															type: 'POST',
             															async:false,
             															data: {id: act.id, tag: text_tag.val()},
@@ -546,7 +546,7 @@ $(document).ready(function(){
 	$('#button_delete_act').on('click',  function(event){
 
 		$.ajax({
-			url: '/delete_act',
+			url: 'http://91.196.245.199:8092/delete_act',
 			type: 'POST',
 			data: {id: idDeleteAct}, 
 			async: false
@@ -566,7 +566,7 @@ $(document).ready(function(){
 	$('#close_popup_add_tag_of_act').on('click',  function(event){
 
 			$.ajax({
-				url: '/get_act_findById',
+				url: 'http://91.196.245.199:8092/get_act_findById',
 				type: 'POST',
 				dataType: 'json',
 				data: {id: idTagTest},
@@ -588,7 +588,7 @@ $(document).ready(function(){
 		if(event.target != popup[0] && popup.has(event.target).length === 0){
 
 			$.ajax({
-				url: '/get_act_findById',
+				url: 'http://91.196.245.199:8092/get_act_findById',
 				type: 'POST',
 				dataType: 'json',
 				data: {id: idTagTest},

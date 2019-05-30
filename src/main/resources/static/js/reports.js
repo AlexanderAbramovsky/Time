@@ -39,7 +39,7 @@
 
             // Получаем все время дня
             $.ajax({
-                url: 'http://localhost:8092/get_all_time_date',
+                url: 'http://91.196.245.199:8092/get_all_time_date',
                 type: 'POST',
                 dataType: 'text',
                 data: {date_act: jsonData},
@@ -98,7 +98,7 @@
 
         // Вызываем все теги из базы данных и заполняем структуру
         $.ajax({
-            url: 'http://localhost:8092/all_tags',
+            url: 'http://91.196.245.199:8092/all_tags',
             type: 'POST',
             dataType: 'json',
             async: false,
@@ -125,7 +125,7 @@
 
             // Делаем ajax запрос и заполняем коллекцию
             $.ajax({
-                url: 'http://localhost:8092/get_acts_findDateAct',
+                url: 'http://91.196.245.199:8092/get_acts_findDateAct',
                 type: 'POST',
                 dataType: 'json',
                 data: {date_act: jsonDate},
@@ -167,7 +167,7 @@
 
         // Делаем запрос на все теги
         $.ajax({
-            url: 'http://localhost:8092/all_tags',
+            url: 'http://91.196.245.199:8092/all_tags',
             type: 'POST',
             dataType: 'json',
             async: false,
