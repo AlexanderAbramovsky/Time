@@ -2,100 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee4f3aef-60be-43ca-a58e-5b79a3b6b0c7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/eltex/Time/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/eltex/Time/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/eltex/Time/controllers/TagController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/eltex/Time/controllers/TagController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/eltex/Time/controllers/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/eltex/Time/controllers/WebController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/eltex/Time/service/TagService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/eltex/Time/service/TagService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/eltex/Time/service/TagServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/eltex/Time/service/TagServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/allclasses.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/allclasses.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/index-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/index-all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/external/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/external/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-3.3.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-3.3.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-migrate-3.0.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-migrate-3.0.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-ui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-ui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-ui.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-ui.structure.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-ui.structure.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-ui.structure.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jquery-ui.structure.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jszip-utils/dist/jszip-utils.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jszip/dist/jszip.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jszip/dist/jszip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/jquery/jszip/dist/jszip.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/jquery/jszip/dist/jszip.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/member-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/overview-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/package-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/package-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/Application.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/Application.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/controllers/TagController.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/controllers/TagController.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/controllers/WebController.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/controllers/WebController.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/controllers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/controllers/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/controllers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/controllers/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/entity/Tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/entity/Tag.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/entity/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/entity/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/entity/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/entity/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/repository/TagRepository.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/repository/TagRepository.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/repository/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/repository/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/repository/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/repository/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/service/TagService.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/service/TagService.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/service/TagServiceImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/service/TagServiceImpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/service/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/service/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/service/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/ru/eltex/Time/service/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/type-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/type-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Server Timer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Server Timer-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/tags.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/tags.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/time.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/time.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/time.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/javadoc/javadoc.options" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/javadoc/javadoc.options" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/controllers/ActController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/controllers/ActController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/controllers/TagController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/controllers/TagController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/controllers/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/controllers/WebController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/entity/Act.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/entity/Act.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/service/ActServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/eltex/Time/service/ActServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/css/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/static/css/menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/static/js/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/js/reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/static/js/reports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/js/tags.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/static/js/tags.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/js/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/static/js/time.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/time.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/time.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/ActController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/TagController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/entity/Act.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltex/Time/entity/Act.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/reports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/tags.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/tags.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/time.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/time.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/time.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -163,7 +71,7 @@
           <entry key="java" value="14082" />
           <entry key="js" value="29" />
           <entry key="log" value="1" />
-          <entry key="properties" value="190" />
+          <entry key="properties" value="191" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -173,7 +81,7 @@
           <entry key="JAVA" value="14082" />
           <entry key="JavaScript" value="29" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Properties" value="190" />
+          <entry key="Properties" value="191" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -188,7 +96,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/config/MvcConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
+            <state relative-caret-position="132">
               <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -221,8 +129,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="16" />
+            <state relative-caret-position="44">
+              <caret line="2" column="61" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -742,7 +650,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="20" />
     <option name="width" value="1370" />
     <option name="height" value="745" />
@@ -848,7 +756,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559204127398" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559207721284" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringSecurityApp" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -931,7 +839,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24765101" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24765101" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -940,7 +848,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1335,13 +1243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/WebController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/config/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-506">
@@ -1354,7 +1255,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/config/MvcConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
+        <state relative-caret-position="132">
           <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1362,10 +1263,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/eltex/Time/controllers/WebController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="16" />
+        <state relative-caret-position="44">
+          <caret line="2" column="61" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="61" />
         </state>
       </provider>
     </entry>
