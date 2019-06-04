@@ -15,20 +15,20 @@ ___________________________________________________________________
 
 Используемые технологии:
 
-Gradle 5.0 - сборщик
-git - система контроля версий
+Gradle 5.0 - сборщик;
+git - система контроля версий;
 На сервере:
-java (jdk-11.0.1)
-Spring Security
-Spring Boot
-Spring MVC
-Spring Data JPA
-база данных MySQL
+java (jdk-11.0.1);
+Spring Security;
+Spring Boot;
+Spring MVC;
+Spring Data JPA;
+база данных MySQL;
 Frontend страницы:
-Html
-Сss
+Html;
+Сss;
 Backend страницы:
-jQuery(Ajax)
+jQuery(Ajax);
 
 ___________________________________________________________________
 
